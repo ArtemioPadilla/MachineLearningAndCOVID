@@ -48,9 +48,10 @@ else:
         st.write('Running')
         # classfier.run(data)
         sleep(0.5)
-        st.write("Done")
+        st.success("Done")
 
         st.markdown("Result presentation")
+        st.snow()
 
 with st.expander("See contributors"):
     col1, col2, col3 = st.columns(3)
