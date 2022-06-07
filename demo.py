@@ -112,13 +112,12 @@ elif analysis == "Neural Network Classifier":
         X_symptoms
         res = predict_model_diagnosis(classifier_symptoms, X_symptoms, device)
         if res == 1:
-            st.markdown(f"El clasificador indica que eres positivo a COVID-19")
+
+            st.error("El clasificador indica que eres positivo a COVID-19")
         elif res == 0:
-            st.markdown(f"El clasificador indica que eres negativo a COVID-19")
+            st.success("El clasificador indica que eres negativo a COVID-19")
         # classfier.run(data)
         
-        device
-        st.success("Done")
 
         st.markdown("Result presentation")
         #st.snow()
