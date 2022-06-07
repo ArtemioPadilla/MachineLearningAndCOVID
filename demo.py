@@ -39,24 +39,62 @@ elif analysis == "Neural Network Classifier":
         st.code("""for i in range(5):
             algorithm""")
 
+    st.markdown("Please enter patient information")
+    col1, col2 = st.columns(2)
+    sex = col1.radio("Sexo", ["Hombre", "Mujer"])
+    edad = col2.slider("Edad", min_value=0, max_value=100)
+    
     st.markdown("Please enter your symptoms")
     col1, col2, col3 = st.columns(3)
+    
     fiebre = col1.radio("Fiebre", ["sí", "No"])
     tos = col2.radio("Tos", ["sí", "No"])
-    dolordecuerpo = col3.radio("Dolor de cuerpo", ["sí", "No"])
-    s4 = col1.radio("sintoma4", ["sí", "No"])
-    s5 = col2.radio("sintoma5", ["sí", "No"])
-    s6 = col3.radio("sintoma6", ["sí", "No"])
+    odinogia = col3.radio("Dolor al tragar", ["sí", "No"])
+    
+    disnea= col1.radio("Falta de aire", ["sí", "No"])
+    diarrea = col2.radio("Diarrea", ["sí", "No"])
+    dotoraci = col3.radio("Dolor torácico", ["sí", "No"])
+    
+    calofrios= col1.radio("Calofrios", ["sí", "No"])
+    cefalea = col2.radio("Cefalea", ["sí", "No"])
+    mialgias = col3.radio("Dolor muscular", ["sí", "No"])
+    
+    artral= col1.radio("Dolor de articulaciones", ["sí", "No"])
+    ataedoge = col2.radio("Ataque al Estado General", ["sí", "No"])
+    rinorrea = col3.radio("Goteo nasal", ["sí", "No"])
+    
+    polipnea= col1.radio("Respiración Acelerada", ["sí", "No"])
+    vomito = col2.radio("Vomito", ["sí", "No"])
+    dolabdo = col3.radio("Dolor Abdominal", ["sí", "No"])
 
-    st.markdown("Please enter your symptoms")
+    
+    conjun= col1.radio("Conjuntivitis", ["sí", "No"])
+    cianosis = col2.radio("Coloración azulada de la piel", ["sí", "No"])
+    inisubis = col3.radio("Inicio súbito de síntomas", ["sí", "No"])
+  
+
+    st.markdown("Please enter your commorbidities")
 
     col1, col2, col3 = st.columns(3)
-    com1 = col1.radio("com1", ["sí", "No"])
-    com2 = col2.radio("com2", ["sí", "No"])
-    com3 = col3.radio("com3", ["sí", "No"])
-    com4 = col1.radio("com4", ["sí", "No"])
-    com5 = col2.radio("com5", ["sí", "No"])
-    com6 = col3.radio("com6", ["sí", "No"])
+    
+    diabetes = col1.radio("diabetes", ["sí", "No"])
+    epoc = col2.radio("epoc", ["sí", "No"])
+    asma = col3.radio("com3", ["sí", "No"])
+    
+    inmusupr = col1.radio("com4", ["sí", "No"])
+    hiperten = col2.radio("com5", ["sí", "No"])
+    vih_sida = col3.radio("com6", ["sí", "No"])
+    
+    inmusupr = col1.radio("inmusupr", ["sí", "No"])
+    hiperten = col2.radio("hiperten", ["sí", "No"])
+    vih_sida = col3.radio("vih_sida", ["sí", "No"])
+    
+    otracon = col1.radio("otracon", ["sí", "No"])
+    enfcardi = col2.radio("enfcardi", ["sí", "No"])
+    obesidad = col3.radio("obesidad", ["sí", "No"])
+    
+    insrencr = col1.radio("insrencr", ["sí", "No"])
+    tabaquis = col2.radio("tabaquis", ["sí", "No"])
     if st.button('Run classifier'):
         st.write('Running')
         # classfier.run(data)
