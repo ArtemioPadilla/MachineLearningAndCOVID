@@ -110,7 +110,7 @@ elif analysis == "Neural Network Classifier":
         			diarrea, dotoraci, calofrios, cefalea, mialgias, artral,
                     ataedoge, rinorrea, polipnea, vomito, dolabdo, conjun,
                     cianosis, inisubis]])
-        X_symptoms
+                    
         res = predict_model_diagnosis(classifier_symptoms, X_symptoms, device)
         if res == 1:
 
