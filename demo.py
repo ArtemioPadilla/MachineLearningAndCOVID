@@ -3,8 +3,8 @@ import streamlit as st
 import pandas as pd
 from time import sleep
 import torch
-from src.helpers import predict_model_diagnosis, prob_model_diagnosis
-from src.NNClassifiers.model_diagnosis import NNcovid_diagnosis
+#from src.helpers import predict_model_diagnosis, prob_model_diagnosis
+#from src.NNClassifiers.model_diagnosis import NNcovid_diagnosis
 # import lstm
 classifier_symptoms = torch.load('./torch_models/model_diagnosis.pth')
 #classifier_disease = torch.load('./torch_models/classifier_disease.pt')
