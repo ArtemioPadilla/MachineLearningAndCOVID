@@ -39,12 +39,14 @@ elif analysis == "Neural Network Classifier":
         st.code("""for i in range(5):
             algorithm""")
 
-    st.markdown("Please enter patient information")
+    st.markdown("__Please enter patient information__")
+    
     col1, col2 = st.columns(2)
+    
     sex = col1.radio("Sexo", ["Hombre", "Mujer"])
     edad = col2.slider("Edad", min_value=0, max_value=100)
     
-    st.markdown("Please enter your symptoms")
+    st.markdown("__Please enter your symptoms__")
     col1, col2, col3 = st.columns(3)
     
     fiebre = col1.radio("Fiebre", ["sí", "No"])
@@ -73,7 +75,7 @@ elif analysis == "Neural Network Classifier":
     inisubis = col3.radio("Inicio súbito de síntomas", ["sí", "No"])
   
 
-    st.markdown("Please enter your commorbidities")
+    st.markdown("__Please enter your commorbidities__")
 
     col1, col2, col3 = st.columns(3)
     
@@ -95,8 +97,11 @@ elif analysis == "Neural Network Classifier":
     
     insrencr = col1.radio("insrencr", ["sí", "No"])
     tabaquis = col2.radio("tabaquis", ["sí", "No"])
+    
     if st.button('Run classifier'):
         st.write('Running')
+        
+        # X_
         # classfier.run(data)
         sleep(0.5)
         st.success("Done")
