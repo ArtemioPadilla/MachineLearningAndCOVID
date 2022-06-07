@@ -3,14 +3,15 @@ import streamlit as st
 import pandas as pd
 from time import sleep
 import torch
-#from src.helpers import predict_model_diagnosis, prob_model_diagnosis
+from src.helpers import predict_model_diagnosis, prob_model_diagnosis
 from src.NNClassifiers.model_diagnosis import NNcovid_diagnosis
 # import lstm
-classifier_symptoms = torch.load('./torch_models/model_diagnosis.pth')
+device = "cpu"#torch.device("cuda" if torch.cuda.is_available() else "cpu")
+classifier_symptoms = torch.load('./torch_models/model_diagnosis.pth', map_location=torch.device(device))
 #classifier_disease = torch.load('./torch_models/classifier_disease.pt')
 #classifier_hosp = torch.load('./torch_models/classifier_hosp.pt')
 
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
 
 #TITLE
 st.title("Some applications of deep learning for the COVID-19 pandemic")
