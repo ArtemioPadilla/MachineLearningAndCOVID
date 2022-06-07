@@ -58,51 +58,51 @@ elif analysis == "Neural Network Classifier":
     st.markdown("__Please enter your symptoms__")
     col1, col2, col3 = st.columns(3)
     
-    fiebre = bool_mask[col1.radio("Fiebre", ["No","sí"])]
-    tos = bool_mask[col2.radio("Tos", ["No","sí"])]
-    odinogia = bool_mask[col3.radio("Dolor al tragar", ["No","sí"])]
+    fiebre = bool_mask[col1.radio("Fiebre", ["no","sí"])]
+    tos = bool_mask[col2.radio("Tos", ["no","sí"])]
+    odinogia = bool_mask[col3.radio("Dolor al tragar", ["no","sí"])]
     
-    disnea = bool_mask[col1.radio("Falta de aire", ["No","sí"])]
-    irritabi = bool_mask[col2.radio("Irritabilidad", ["No","sí"])]
-    diarrea = bool_mask[col3.radio("Diarrea", ["No","sí"])]
+    disnea = bool_mask[col1.radio("Falta de aire", ["no","sí"])]
+    irritabi = bool_mask[col2.radio("Irritabilidad", ["no","sí"])]
+    diarrea = bool_mask[col3.radio("Diarrea", ["no","sí"])]
     
-    dotoraci = bool_mask[col1.radio("Dolor torácico", ["No","sí"])]
-    calofrios = bool_mask[col2.radio("Calofrios", ["No","sí"])]
-    cefalea = bool_mask[col3.radio("Cefalea", ["No","sí"])]
+    dotoraci = bool_mask[col1.radio("Dolor torácico", ["no","sí"])]
+    calofrios = bool_mask[col2.radio("Calofrios", ["no","sí"])]
+    cefalea = bool_mask[col3.radio("Cefalea", ["no","sí"])]
 
-    mialgias = bool_mask[col1.radio("Dolor muscular", ["No","sí"])]
-    artral = bool_mask[col2.radio("Dolor de articulaciones", ["No","sí"])]
-    ataedoge = bool_mask[col3.radio("Ataque al Estado General", ["No","sí"])]
+    mialgias = bool_mask[col1.radio("Dolor muscular", ["no","sí"])]
+    artral = bool_mask[col2.radio("Dolor de articulaciones", ["no","sí"])]
+    ataedoge = bool_mask[col3.radio("Ataque al Estado General", ["no","sí"])]
     
-    rinorrea = bool_mask[col1.radio("Goteo nasal", ["No","sí"])]
-    polipnea = bool_mask[col2.radio("Respiración Acelerada", ["No","sí"])]
-    vomito = bool_mask[col3.radio("Vomito", ["No","sí"])]
+    rinorrea = bool_mask[col1.radio("Goteo nasal", ["no","sí"])]
+    polipnea = bool_mask[col2.radio("Respiración Acelerada", ["no","sí"])]
+    vomito = bool_mask[col3.radio("Vomito", ["no","sí"])]
     
-    dolabdo = bool_mask[col1.radio("Dolor Abdominal", ["No","sí"])]
-    conjun = bool_mask[col2.radio("Conjuntivitis", ["No","sí"])]
-    cianosis = bool_mask[col3.radio("Coloración azulada de la piel", ["No","sí"])]
+    dolabdo = bool_mask[col1.radio("Dolor Abdominal", ["no","sí"])]
+    conjun = bool_mask[col2.radio("Conjuntivitis", ["no","sí"])]
+    cianosis = bool_mask[col3.radio("Coloración azulada de la piel", ["no","sí"])]
     
-    inisubis = bool_mask[col1.radio("Inicio súbito de síntomas", ["No","sí"])]
+    inisubis = bool_mask[col1.radio("Inicio súbito de síntomas", ["no","sí"])]
   
 
     st.markdown("__Please enter your commorbidities__")
 
     col1, col2, col3 = st.columns(3)
     
-    diabetes = bool_mask[col1.radio("diabetes", ["No","sí"])]
-    epoc = bool_mask[col2.radio("epoc", ["No","sí"])]
-    asma = bool_mask[col3.radio("asma", ["No","sí"])]
+    diabetes = bool_mask[col1.radio("diabetes", ["no","sí"])]
+    epoc = bool_mask[col2.radio("epoc", ["no","sí"])]
+    asma = bool_mask[col3.radio("asma", ["no","sí"])]
     
-    inmusupr = bool_mask[col1.radio("inmusupr", ["No","sí"])]
-    hiperten = bool_mask[col2.radio("hiperten", ["No","sí"])]
-    vih_sida = bool_mask[col3.radio("vih_sida", ["No","sí"])]
+    inmusupr = bool_mask[col1.radio("inmusupr", ["no","sí"])]
+    hiperten = bool_mask[col2.radio("hiperten", ["no","sí"])]
+    vih_sida = bool_mask[col3.radio("vih_sida", ["no","sí"])]
     
-    otracon = bool_mask[col1.radio("otracon", ["No","sí"])]
-    enfcardi = bool_mask[col2.radio("enfcardi", ["No","sí"])]
-    obesidad = bool_mask[col3.radio("obesidad", ["No","sí"])]
+    otracon = bool_mask[col1.radio("otracon", ["no","sí"])]
+    enfcardi = bool_mask[col2.radio("enfcardi", ["no","sí"])]
+    obesidad = bool_mask[col3.radio("obesidad", ["no","sí"])]
     
-    insrencr = bool_mask[col1.radio("insrencr", ["No","sí"])]
-    tabaquis = bool_mask[col2.radio("tabaquis", ["No","sí"])]
+    insrencr = bool_mask[col1.radio("insrencr", ["no","sí"])]
+    tabaquis = bool_mask[col2.radio("tabaquis", ["no","sí"])]
     
     if st.button('Run classifieres'):
         st.write('Running')
