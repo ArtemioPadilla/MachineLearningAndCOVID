@@ -112,15 +112,17 @@ elif analysis == "Neural Network Classifier":
                     cianosis, inisubis]])
 
         res = predict_model_diagnosis(classifier_symptoms, X_symptoms, device)
+        probs = prob_model_diagnosis(classifier_symptoms, X_symptoms, device) 
+
+        st.markdown("""## Predicted Diagnosis""")
         if res == 1:
 
-            st.error("El clasificador indica que eres positivo a COVID-19")
+            st.error(f"El clasificador indica que eres POSITIVO a COVID-19 con probabilidad de {probs[1]:.2f}%")
         elif res == 0:
-            st.success("El clasificador indica que eres negativo a COVID-19")
+            st.success(f"El clasificador indica que eres NEGATIVO a COVID-19 con probabilidad de {probs[0]:.2f}%")
         # classfier.run(data)
         
 
-        st.markdown("Result presentation")
         #st.snow()
 
 with st.expander("See contributors"):
