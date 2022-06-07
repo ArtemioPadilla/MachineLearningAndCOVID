@@ -1,3 +1,1 @@
 torch
-src.helpers import predict_model_diagnosis, prob_model_diagnosis
-src.NNClassifiers.model_diagnosis import NNcovid_diagnosis
