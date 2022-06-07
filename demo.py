@@ -1,14 +1,20 @@
+import numpy as np
 import streamlit as st
 import pandas as pd
 from time import sleep
+import torch
+from src.helpers import predict_model_diagnosis, prob_model_diagnosis
+from src.NNClassifiers.model_diagnosis import NNcovid_diagnosis
 # import lstm
-# import classifier
+classifier_symptoms = torch.load('./torch_models/model_diagnosis.pth')
+#classifier_disease = torch.load('./torch_models/classifier_disease.pt')
+#classifier_hosp = torch.load('./torch_models/classifier_hosp.pt')
 
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
+#TITLE
 st.title("Some applications of deep learning for the COVID-19 pandemic")
-
-
 st.markdown("In this application you can either get forecast for the COVID-19 pandemic infected number using **LSTMs** or you can use a **neural network classifier** to get probabilities of desease and hospitalization for an individual with certain characteristics")
-
 st.markdown("_more info to be written here_")
 
 analysis = st.radio("Please enter which type of application you want to explore:", ["None","LSTM forecast", "Neural Network Classifier"])
@@ -43,71 +49,79 @@ elif analysis == "Neural Network Classifier":
     
     col1, col2 = st.columns(2)
     
-    sex = col1.radio("Sexo", ["Hombre", "Mujer"])
+    bool_mask = {"sí":1, "no":0, "Hombre":1, "Mujer":0}
+
+    sexo = bool_mask[col1.radio("Sexo", ["Hombre", "Mujer"])]
     edad = col2.slider("Edad", min_value=0, max_value=100)
     
     st.markdown("__Please enter your symptoms__")
     col1, col2, col3 = st.columns(3)
     
-    fiebre = col1.radio("Fiebre", ["sí", "No"])
-    tos = col2.radio("Tos", ["sí", "No"])
-    odinogia = col3.radio("Dolor al tragar", ["sí", "No"])
+    fiebre = bool_mask[col1.radio("Fiebre", ["sí", "No"])]
+    tos = bool_mask[col2.radio("Tos", ["sí", "No"])]
+    odinogia = bool_mask[col3.radio("Dolor al tragar", ["sí", "No"])]
     
-    disnea= col1.radio("Falta de aire", ["sí", "No"])
-    diarrea = col2.radio("Diarrea", ["sí", "No"])
-    dotoraci = col3.radio("Dolor torácico", ["sí", "No"])
+    disnea = bool_mask[col1.radio("Falta de aire", ["sí", "No"])]
+    irritabi = bool_mask[col2.radio("Irritabilidad", ["sí", "No"])]
+    diarrea = bool_mask[col3.radio("Diarrea", ["sí", "No"])]
     
-    calofrios= col1.radio("Calofrios", ["sí", "No"])
-    cefalea = col2.radio("Cefalea", ["sí", "No"])
-    mialgias = col3.radio("Dolor muscular", ["sí", "No"])
-    
-    artral= col1.radio("Dolor de articulaciones", ["sí", "No"])
-    ataedoge = col2.radio("Ataque al Estado General", ["sí", "No"])
-    rinorrea = col3.radio("Goteo nasal", ["sí", "No"])
-    
-    polipnea= col1.radio("Respiración Acelerada", ["sí", "No"])
-    vomito = col2.radio("Vomito", ["sí", "No"])
-    dolabdo = col3.radio("Dolor Abdominal", ["sí", "No"])
+    dotoraci = bool_mask[col1.radio("Dolor torácico", ["sí", "No"])]
+    calofrios = bool_mask[col2.radio("Calofrios", ["sí", "No"])]
+    cefalea = bool_mask[col3.radio("Cefalea", ["sí", "No"])]
 
+    mialgias = bool_mask[col1.radio("Dolor muscular", ["sí", "No"])]
+    artral = bool_mask[col2.radio("Dolor de articulaciones", ["sí", "No"])]
+    ataedoge = bool_mask[col3.radio("Ataque al Estado General", ["sí", "No"])]
     
-    conjun= col1.radio("Conjuntivitis", ["sí", "No"])
-    cianosis = col2.radio("Coloración azulada de la piel", ["sí", "No"])
-    inisubis = col3.radio("Inicio súbito de síntomas", ["sí", "No"])
+    rinorrea = bool_mask[col1.radio("Goteo nasal", ["sí", "No"])]
+    polipnea = bool_mask[col2.radio("Respiración Acelerada", ["sí", "No"])]
+    vomito = bool_mask[col3.radio("Vomito", ["sí", "No"])]
+    
+    dolabdo = bool_mask[col1.radio("Dolor Abdominal", ["sí", "No"])]
+    conjun = bool_mask[col2.radio("Conjuntivitis", ["sí", "No"])]
+    cianosis = bool_mask[col3.radio("Coloración azulada de la piel", ["sí", "No"])]
+    
+    inisubis = bool_mask[col1.radio("Inicio súbito de síntomas", ["sí", "No"])]
   
 
     st.markdown("__Please enter your commorbidities__")
 
     col1, col2, col3 = st.columns(3)
     
-    diabetes = col1.radio("diabetes", ["sí", "No"])
-    epoc = col2.radio("epoc", ["sí", "No"])
-    asma = col3.radio("com3", ["sí", "No"])
+    diabetes = bool_mask[col1.radio("diabetes", ["sí", "No"])]
+    epoc = bool_mask[col2.radio("epoc", ["sí", "No"])]
+    asma = bool_mask[col3.radio("asma", ["sí", "No"])]
     
-    inmusupr = col1.radio("com4", ["sí", "No"])
-    hiperten = col2.radio("com5", ["sí", "No"])
-    vih_sida = col3.radio("com6", ["sí", "No"])
+    inmusupr = bool_mask[col1.radio("inmusupr", ["sí", "No"])]
+    hiperten = bool_mask[col2.radio("hiperten", ["sí", "No"])]
+    vih_sida = bool_mask[col3.radio("vih_sida", ["sí", "No"])]
     
-    inmusupr = col1.radio("inmusupr", ["sí", "No"])
-    hiperten = col2.radio("hiperten", ["sí", "No"])
-    vih_sida = col3.radio("vih_sida", ["sí", "No"])
+    otracon = bool_mask[col1.radio("otracon", ["sí", "No"])]
+    enfcardi = bool_mask[col2.radio("enfcardi", ["sí", "No"])]
+    obesidad = bool_mask[col3.radio("obesidad", ["sí", "No"])]
     
-    otracon = col1.radio("otracon", ["sí", "No"])
-    enfcardi = col2.radio("enfcardi", ["sí", "No"])
-    obesidad = col3.radio("obesidad", ["sí", "No"])
+    insrencr = bool_mask[col1.radio("insrencr", ["sí", "No"])]
+    tabaquis = bool_mask[col2.radio("tabaquis", ["sí", "No"])]
     
-    insrencr = col1.radio("insrencr", ["sí", "No"])
-    tabaquis = col2.radio("tabaquis", ["sí", "No"])
-    
-    if st.button('Run classifier'):
+    if st.button('Run classifieres'):
         st.write('Running')
-        
-        # X_
+        X_symptoms = np.array([[sexo, edad, fiebre, tos, odinogia, disnea, irritabi,
+        			diarrea, dotoraci, calofrios, cefalea, mialgias, artral,
+                    ataedoge, rinorrea, polipnea, vomito, dolabdo, conjun,
+                    cianosis, inisubis]])
+        X_symptoms
+        res = predict_model_diagnosis(classifier_symptoms, X_symptoms, device)
+        if res == 1:
+            st.markdown(f"El clasificador indica que eres positivo a COVID-19")
+        elif res == 0:
+            st.markdown(f"El clasificador indica que eres negativo a COVID-19")
         # classfier.run(data)
-        sleep(0.5)
+        
+        device
         st.success("Done")
 
         st.markdown("Result presentation")
-        st.snow()
+        #st.snow()
 
 with st.expander("See contributors"):
     col1, col2, col3 = st.columns(3)
