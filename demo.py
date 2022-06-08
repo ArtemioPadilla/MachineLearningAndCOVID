@@ -152,7 +152,7 @@ elif analysis == "Convolutional Neural Networks":
         if res == 1:
             st.error(f"El clasificador indica que eres POSITIVO a COVID-19 con una seguridad de {probs[1]*100:.2f}%")
         elif res == 0:
-            if probs[0] > 0.6:
+            if probs[0] > 0.5:
                 st.success(f"El clasificador indica que eres NEGATIVO a COVID-19 con una seguridad de {probs[0]*100:.2f}%")
             else:
                 st.warning(f"El clasificador indica que eres NEGATIVO a COVID-19 con una seguridad de {probs[0]*100:.2f}%")
