@@ -3,13 +3,13 @@ import streamlit as st
 import pandas as pd
 from time import sleep
 import torch
-from src.helpers import predict_model_diagnosis, prob_model_diagnosis
-from src.NNClassifiers.model_diagnosis import NNcovid_diagnosis
+from src.helpers import predict_model, prob_model
+from src.NNClassifiers.NNmodels import NNclassifier
 # import lstm
 device = "cpu"#torch.device("cuda" if torch.cuda.is_available() else "cpu")
 classifier_symptoms = torch.load('./torch_models/model_diagnosis.pth', map_location=torch.device(device))
-#classifier_disease = torch.load('./torch_models/classifier_disease.pt')
-#classifier_hosp = torch.load('./torch_models/classifier_hosp.pt')
+classifier_hosp = torch.load('./torch_models/model_hosp.pth', map_location=torch.device(device))
+classifier_death = torch.load('./torch_models/model_death.pth', map_location=torch.device(device))
 
 
 
@@ -83,6 +83,7 @@ elif analysis == "Neural Network Classifier":
     cianosis = bool_mask[col3.radio("Coloración azulada de la piel", ["no","sí"])]
     
     inisubis = bool_mask[col1.radio("Inicio súbito de síntomas", ["no","sí"])]
+    #digcline = bool_mask[col1.radio("Neumonía", ["no","sí"])]
   
 
     st.markdown("__Please enter your commorbidities__")
@@ -105,21 +106,53 @@ elif analysis == "Neural Network Classifier":
     tabaquis = bool_mask[col2.radio("tabaquis", ["no","sí"])]
     
     if st.button('Run classifieres'):
-        st.write('Running')
+
+        st.markdown("""## Predicted Diagnosis""")
         X_symptoms = np.array([[sexo, edad, fiebre, tos, odinogia, disnea, irritabi,
         			diarrea, dotoraci, calofrios, cefalea, mialgias, artral,
                     ataedoge, rinorrea, polipnea, vomito, dolabdo, conjun,
                     cianosis, inisubis]])
+        res = predict_model(classifier_symptoms, X_symptoms, device)
+        probs = prob_model(classifier_symptoms, X_symptoms, device) 
 
-        res = predict_model_diagnosis(classifier_symptoms, X_symptoms, device)
-        probs = prob_model_diagnosis(classifier_symptoms, X_symptoms, device) 
-
-        st.markdown("""## Predicted Diagnosis""")
         if res == 1:
-
             st.error(f"El clasificador indica que eres POSITIVO a COVID-19 con probabilidad de {probs[1]:.2f}%")
         elif res == 0:
             st.success(f"El clasificador indica que eres NEGATIVO a COVID-19 con probabilidad de {probs[0]:.2f}%")
+
+
+
+        st.markdown("""## Risk of Hospitalization""")
+        X_hosp= np.array([[sexo,  edad, fiebre, tos, odinogia, disnea,
+                           irritabi, diarrea, dotoraci, calofrios, cefalea, mialgias,
+                           artral, ataedoge, rinorrea, polipnea, vomito, dolabdo,
+                           conjun, cianosis, inisubis, diabetes, epoc, asma,
+                           inmusupr, hiperten, vih_sida, otracon, enfcardi, obesidad,
+                           insrencr, tabaquis]])
+        
+        res = predict_model(classifier_hosp, X_hosp, device)
+        probs = prob_model(classifier_hosp, X_hosp, device) 
+
+        st.markdown("If you where to have covid the chances of you being hospitalized having your commobidities and symtoms are:")
+        if res == 1:
+            st.error(f"Estimamos que si te da COVID-19 van a tener que HOSPITALIZARTE con probabilidad de {probs[1]:.2f}%")
+        elif res == 0:
+            st.success(f"Estimamos que si te da COVID-19 NO HABRA HOSPITALIZACIÓN con probabilidad de {probs[0]:.2f}%")
+
+
+        st.markdown("""## Risk of Death""")
+
+        X_death= np.array([[sexo, edad, diabetes, epoc, asma, inmusupr, hiperten,
+                            vih_sida, otracon, enfcardi, obesidad, insrencr, tabaquis]])
+
+        res = predict_model(classifier_death, X_death, device)
+        probs = prob_model(classifier_death, X_death, device) 
+
+        st.markdown("If you where to have covid given your symptoms and your commorbidities the chances of you dying are:")
+        if res == 1:
+            st.error(f"Podrías MORIR a COVID-19 con probabilidad de {probs[1]:.2f}%")
+        elif res == 0:
+            st.success(f"Lo más probable es que SOBREVIVAS con probabilidad de {probs[0]:.2f}%")
         # classfier.run(data)
         
 
