@@ -66,7 +66,7 @@ class LSTM(nn.Module):
         
         return out
 
-def train_lstm(trainX,trainY, seq_length=4, num_epochs = 50,learning_rate = 0.01,input_size = 1,hidden_size = 2,num_layers = 1,num_classes = 1):
+def train_lstm(trainX,trainY, seq_length=4, num_epochs = 500,learning_rate = 0.01,input_size = 1,hidden_size = 2,num_layers = 1,num_classes = 1):
   lstm = LSTM(seq_length, num_classes, input_size, hidden_size, num_layers)
 
   criterion = torch.nn.MSELoss()    # mean-squared error for regression
