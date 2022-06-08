@@ -162,9 +162,9 @@ elif analysis == "Neural Network Classifier":
             st.error(f"Estimamos que si te da COVID-19 van a tener que HOSPITALIZARTE con una seguridad de {probs[1]*100:.2f}%")
         elif res == 0:
             if probs[0] > 0.7:
-                st.success(f"Estimamos que si te da COVID-19 no van a tener que HOSPITALIZARTE con una seguridad de {probs[0]*100:.2f}%")
+                st.success(f"Estimamos que si te da COVID-19 NO van a tener que HOSPITALIZARTE con una seguridad de {probs[0]*100:.2f}%")
             else:
-                st.warning(f"Estimamos que si te da COVID-19 no van a tener que HOSPITALIZARTE con una seguridad de {probs[0]*100:.2f}%")
+                st.warning(f"Estimamos que si te da COVID-19 NO van a tener que HOSPITALIZARTE con una seguridad de {probs[0]*100:.2f}%")
 
 
         st.markdown("""## Risk of Death""")
@@ -180,10 +180,9 @@ elif analysis == "Neural Network Classifier":
             st.error(f"La red neuronal piensa que vas a MORIR con una seguridad de {probs[1]*100:.2f}%")
         elif res == 0:
             if probs[0] > 0.7:
-                st.success(f"La red neuronal piensa que vas a MORIR con una seguridad de {probs[0]*100:.2f}%")
+                st.success(f"La red neuronal piensa que vas a SOBREVIVIR con una seguridad de {probs[0]*100:.2f}%")
             else:
-                st.warning(f"La red neuronal piensa que vas a MORIR con una seguridad de {probs[0]*100:.2f}%")
-            st.success(f"Lo más probable es que SOBREVIVAS con una seguridad de {probs[0]*100:.2f}%")
+                st.warning(f"La red neuronal piensa que vas a SOBREVIVIR con una seguridad de {probs[0]*100:.2f}%")
         # classfier.run(data)
         
 
