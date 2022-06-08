@@ -120,8 +120,8 @@ def data_train(country, window, time,type_ts ):
   testY = Variable(torch.Tensor(np.array(y[train_size:len(y)])))
   return trainX, trainY
 
-trainX,trainY= data_train("Afghanistan", 4, 30, "New_cases")
-stm = train_lstm(trainX,trainY)
+#trainX,trainY= data_train("Afghanistan", 4, 30, "New_cases")
+#stm = train_lstm(trainX,trainY)
 
 
 def plot_ts(time, window, country,type_ts ):
