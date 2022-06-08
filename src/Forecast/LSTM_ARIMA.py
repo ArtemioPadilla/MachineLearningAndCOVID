@@ -66,7 +66,7 @@ class LSTM(nn.Module):
         
         return out
 
-def train_lstm(trainX,trainY, seq_length=4, num_epochs = 2000,learning_rate = 0.01,input_size = 1,hidden_size = 2,num_layers = 1,num_classes = 1):
+def train_lstm(trainX,trainY, seq_length=4, num_epochs = 50,learning_rate = 0.01,input_size = 1,hidden_size = 2,num_layers = 1,num_classes = 1):
   lstm = LSTM(seq_length, num_classes, input_size, hidden_size, num_layers)
 
   criterion = torch.nn.MSELoss()    # mean-squared error for regression
@@ -84,8 +84,8 @@ def train_lstm(trainX,trainY, seq_length=4, num_epochs = 2000,learning_rate = 0.
       loss.backward()
       
       optimizer.step()
-      #if epoch % 100 == 0:
-        #print("Epoch: %d, loss: %1.5f" % (epoch, loss.item()))
+      if epoch % 10 == 0:
+        print("Epoch: %d, loss: %1.5f" % (epoch, loss.item()))
   return lstm
 
 def predict_future_jojojo(data_last,time_future, window):
@@ -120,8 +120,8 @@ def data_train(country, window, time,type_ts ):
   testY = Variable(torch.Tensor(np.array(y[train_size:len(y)])))
   return trainX, trainY
 
-#trainX,trainY= data_train("Afghanistan", 4, 30, "New_cases")
-#stm = train_lstm(trainX,trainY)
+trainX,trainY= data_train("Afghanistan", 4, 30, "New_cases")
+stm = train_lstm(trainX,trainY)
 
 
 def plot_ts(time, window, country,type_ts ):

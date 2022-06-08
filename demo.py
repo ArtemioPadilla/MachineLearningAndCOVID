@@ -50,13 +50,13 @@ if analysis == "LSTM forecast":
     # Plot line chart
     # st.line_chart(np.concat([data,prediction]))
     window = 4
-    #sc = MinMaxScaler()
-    #type_ts_ = type_ts.replace(" ", "_")
-    #trainX,trainY= data_train(country, window, window_to_predict,type_ts_ )
+    sc = MinMaxScaler()
+    type_ts_ = type_ts.replace(" ", "_")
+    trainX,trainY= data_train(country, window, window_to_predict,type_ts_ )
     #Entrenamos
-    #lstm = train_lstm(trainX,trainY)
-    #fig = plot_ts(window_to_predict, window, country , type_ts_)
-    #st.plotly_chart(fig)
+    lstm = train_lstm(trainX,trainY)
+    fig = plot_ts(window_to_predict, window, country , type_ts_)
+    st.plotly_chart(fig)
     url = "https://raw.githubusercontent.com/ArtemioPadilla/ML-Datasets/main/Casos_Diarios_Estado_Nacional_Defunciones_20210121.csv"
     df = pd.read_csv(url)
     #st.dataframe(df.iloc[:,3:])
