@@ -64,8 +64,8 @@ if analysis == "LSTM forecast":
     #trainX,trainY= data_train(country, window, window_to_predict,type_ts_ )
 
     #Entrenamos
-    lstm_save = load_model('./torch_models/LSTM_models_'+str(type_ts_)+'/'+country+'_New_cases.pth')
-    #lstm_save = torch.load('./torch_models/LSTM_models_'+type_ts_+'/'+country+'_New_cases.pth', map_location=torch.device("cpu"))
+    #lstm_save = load_model('./torch_models/LSTM_models_'+str(type_ts_)+'/'+country+'_New_cases.pth')
+    lstm_save = torch.load('./torch_models/LSTM_models_'+str(type_ts_)+'/'+country+'_New_cases.pth', map_location=torch.device("cpu"))
     model = LSTM(seq_length=4,input_size = 1,hidden_size = 4,num_layers = 1,num_classes = 1)
     model.load_state_dict(lstm_save)
     arima_path = './torch_models/ARIMA_models_'+type_ts_+'/'+country+'New_cases.pkl'
