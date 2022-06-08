@@ -13,12 +13,9 @@ import torch.nn as nn
 from torch.autograd import Variable
 from sklearn.preprocessing import MinMaxScaler
 import plotly.graph_objects as go
-from tqdm import tqdm
-import country_list
 import numpy as np
 from datetime import datetime
 from datetime import timedelta
-import matplotlib.pyplot as plt
 import pmdarima as pm
 
 # -------------------------------------------------------------------------
@@ -77,7 +74,7 @@ def train_lstm(trainX,trainY, seq_length=4, num_epochs = 2000,learning_rate = 0.
   #optimizer = torch.optim.SGD(lstm.,(), lr=learning_rate)
 
   # Train the model
-  for epoch in tqdm(range(num_epochs)):
+  for epoch in range(num_epochs):
       outputs = lstm(trainX)
       optimizer.zero_grad()
       

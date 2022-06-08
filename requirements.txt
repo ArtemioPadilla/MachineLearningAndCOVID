@@ -1,3 +1,4 @@
 torch
 plotly
 pmdarima
+sklearn
