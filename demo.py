@@ -190,12 +190,12 @@ elif analysis == "Convolutional Neural Networks":
 
         st.markdown("If you where to have covid given your symptoms and your commorbidities the chances of you dying are:")
         if res == 1:
-            st.error(f"La red neuronal piensa que vas a MORIR con una seguridad de {probs[1]*100:.2f}%")
-        elif res == 0:
-            if probs[0] > 0.6:
-                st.success(f"La red neuronal piensa que vas a SOBREVIVIR con una seguridad de {probs[0]*100:.2f}%")
+            if probs[1] > 0.75:
+                st.error(f"La red neuronal piensa que vas a MORIR con una seguridad de {probs[1]*100:.2f}%")
             else:
-                st.warning(f"La red neuronal piensa que vas a SOBREVIVIR con una seguridad de {probs[0]*100:.2f}%")
+                st.waringe(f"La red neuronal piensa que vas a MORIR con una seguridad de {probs[1]*100:.2f}%")
+        elif res == 0:
+            st.success(f"La red neuronal piensa que vas a SOBREVIVIR con una seguridad de {probs[0]*100:.2f}%")
         # classfier.run(data)
         
 
