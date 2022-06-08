@@ -94,13 +94,35 @@ elif analysis == "Convolutional Neural Networks":
     with st.expander("About this model"):
         st.markdown("The convolutional neural networks on this project used the following architecture:")
         st.image("https://raw.githubusercontent.com/ArtemioPadilla/MachineLearningAndCOVID/main/src/NNClassifiers/cnn.svg")    
+        st.markdown("Between each FC layer an nonlinear sigmoid activation function was employed:")
         st.markdown("The variables used to try to detect infected are :")
-        st.markdown("The variables used to try to detect risk of hospitalization are :")
-        st.markdown("The variables used to try to detect risk of dead are :")
-        st.markdown(f"The model to try to detect infected had an average accuracy of {67.60}% the following classification report:")
-        st.markdown("""
-              precision    recall  f1-score   support
+        st.code("""
+sexo, edad, fiebre, tos, odinogia, disnea, irritabilidad, 
+diarrea, dolor torácico, calofrios, cefalea, mialgias, artral,
+ataque al estado general, rinorrea, polipnea, vomito, dolor abdominal, 
+conjuntivitis, cianosis, inicio súbito de sintomas""")
 
+        st.markdown("The variables used to try to detect risk of hospitalization are:")
+        st.code("""
+sexo,  edad, fiebre, tos, odinogia, disnea,
+irritabilidad, diarrea, dolor torácico, calofrios, cefalea, mialgias,
+artral, ataque al estado general, rinorrea, polipnea, vomito, 
+dolor abdominal, conjuntivitis, cianosis, inicio subito de síntomas, 
+diabetes, epoc, asma, inmusupresión, hipertensión, 
+vih_sida, otras comorbilidades, enfermedad cardiovascular, obesidad,
+insuficiencia renal crónica, tabaquismo""")
+
+        st.markdown("The variables used to try to detect risk of dead are :")
+        st.code("""
+sexo, edad, diabetes, epoc, asma, inmusupresión, hipertensión, 
+vih_sida, otras comorbilidades, enfermedad cardiovascular, obesidad,
+insuficiencia renal crónica, tabaquismo""")
+
+
+        st.markdown(f"The model to try to detect infected was trained on 300,000 patients, and was tested on another 100,000 patients with an average accuracy of {67.60}% the following classification report:")
+        st.code("""
+
+______________precision    recall  f1-score   support
     NEGATIVE       0.90      0.66      0.76     78398
        COVID       0.37      0.73      0.49     21602
 
@@ -109,10 +131,9 @@ elif analysis == "Convolutional Neural Networks":
 weighted avg       0.78      0.68      0.70    100000
 
         """)
-        st.markdown(f"The model to try to detect hospitalization risk had an average accuracy of {89.91}% the following classification report:")
-        st.markdown("""
-                  precision    recall  f1-score   support
-
+        st.markdown(f"The model to try to detect hospitalization risk was trained on 258,667 patients, and was tested on another 86,222 patients with an average accuracy of {89.91}% the following classification report:")
+        st.code("""
+__________________precision    recall  f1-score   support
 NOT HOSPITALIZED       0.99      0.90      0.94     81856
     HOSPITALIZED       0.31      0.84      0.46      4367
 
@@ -120,12 +141,11 @@ NOT HOSPITALIZED       0.99      0.90      0.94     81856
        macro avg       0.65      0.87      0.70     86223
     weighted avg       0.96      0.90      0.92     86223
         """)
-        st.markdown(f"The model to try to detect risk of dying had an average accuracy if {80.56}% and the following classification report:")
-        st.markdown("""
-              precision    recall  f1-score   support
-
-        Life       0.99      0.81      0.89     84295
-        Dead       0.09      0.81      0.16      1928
+        st.markdown(f"The model to try to detect risk of dying was trained on 258,667 patients, and was tested on another 86,222 patients with an average accuracy if {80.56}% and the following classification report:")
+        st.code("""
+______________precision    recall  f1-score   support
+        LIFE       0.99      0.81      0.89     84295
+        DEAD       0.09      0.81      0.16      1928
 
     accuracy                           0.81     86223
    macro avg       0.54      0.81      0.52     86223
