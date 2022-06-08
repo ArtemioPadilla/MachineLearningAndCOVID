@@ -193,7 +193,7 @@ elif analysis == "Convolutional Neural Networks":
             if probs[1] > 0.75:
                 st.error(f"La red neuronal piensa que vas a MORIR con una seguridad de {probs[1]*100:.2f}%")
             else:
-                st.waringe(f"La red neuronal piensa que vas a MORIR con una seguridad de {probs[1]*100:.2f}%")
+                st.warning(f"La red neuronal piensa que vas a MORIR con una seguridad de {probs[1]*100:.2f}%")
         elif res == 0:
             st.success(f"La red neuronal piensa que vas a SOBREVIVIR con una seguridad de {probs[0]*100:.2f}%")
         # classfier.run(data)
