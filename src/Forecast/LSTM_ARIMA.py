@@ -5,15 +5,11 @@
 
 import numpy as np
 import pandas as pd
-import plotly.express as px
-import numpy as np
-import matplotlib.pyplot as plt
 import torch
 import torch.nn as nn
 from torch.autograd import Variable
 from sklearn.preprocessing import MinMaxScaler
 import plotly.graph_objects as go
-import numpy as np
 from datetime import datetime
 from datetime import timedelta
 import pmdarima as pm
