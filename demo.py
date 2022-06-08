@@ -42,6 +42,7 @@ if analysis == "LSTM forecast":
     country = st.selectbox("Pick a country to analyse", contries)
     st.slider(label= "Select the window of time in days to predict", min_value=1, max_value=30, value=None, step=None)
     window_to_predict = st.write(f"The country you choose is {country}")
+    type_ts = st.radio("Count Type", ["New cases","New deaths"])
     st.metric(label = "Test", value=1, delta=-0.1, delta_color="normal")
     # Example plot
     # Get LSTM prediction for country
@@ -50,10 +51,11 @@ if analysis == "LSTM forecast":
     # st.line_chart(np.concat([data,prediction]))
     window = 4
     sc = MinMaxScaler()
-    trainX,trainY= data_train(country, window, window_to_predict)
+    type_ts_ = type_ts.replace(" ", "_")
+    trainX,trainY= data_train(country, window, window_to_predict,type_ts_ )
     #Entrenamos
     lstm = train_lstm(trainX,trainY)
-    fig = plot_ts(window_to_predict, window, country )
+    fig = plot_ts(window_to_predict, window, country , type_ts_)
     st.plotly_chart(fig)
     url = "https://raw.githubusercontent.com/ArtemioPadilla/ML-Datasets/main/Casos_Diarios_Estado_Nacional_Defunciones_20210121.csv"
     df = pd.read_csv(url)

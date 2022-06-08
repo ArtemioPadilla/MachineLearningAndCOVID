@@ -2,7 +2,6 @@
 #                                   Packeterias
 # -------------------------------------------------------------------------
 
-
 import numpy as np
 import pandas as pd
 import torch
@@ -13,6 +12,11 @@ import plotly.graph_objects as go
 from datetime import datetime
 from datetime import timedelta
 import pmdarima as pm
+
+#Data
+
+cases_who = pd.read_csv('https://raw.githubusercontent.com/ArtemioPadilla/MachineLearningAndCOVID/main/Datasets/SDG-3-Health/WHO-COVID-19-global-data-up.csv')
+sc = MinMaxScaler()
 
 # -------------------------------------------------------------------------
 #                                   LSTM FUNCTIONS
@@ -93,11 +97,11 @@ def predict_future_jojojo(data_last,time_future, window):
   data_predict = sc.inverse_transform(np.array(predictions).reshape(-1,1))
   return data_predict
 
-def data_train(country, window, time):
+def data_train(country, window, time,type_ts ):
   #Filtramos datos
-  training_set =cases_who[cases_who.Country ==country][cases_who.New_cases !=0 ]
+  training_set =cases_who[cases_who.Country ==country][cases_who[type_ts] !=0 ]
   sc = MinMaxScaler()
-  training_data = sc.fit_transform(training_set.New_cases.values.reshape(-1, 1))
+  training_data = sc.fit_transform(training_set[type_ts].values.reshape(-1, 1))
   
   num_layers = 1
   seq_length = window
