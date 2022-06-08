@@ -86,8 +86,8 @@ if analysis == "LSTM-ARIMA forecast":
         return torch.load(path,  map_location=torch.device(device))
 
     st.markdown('./torch_models/LSTMS_models_'+str(type_ts_)+'/'+country+last_pth)
-    #lstm_save = load_model('./torch_models/LSTMS_models_'+str(type_ts_)+'/'+country+last_pth)
-    lstm_save = torch.load('./torch_models/LSTMS_models_'+str(type_ts_)+'/'+country+last_pth)
+    lstm_save = load_model('./torch_models/LSTMS_models_'+str(type_ts_)+'/'+country+last_pth)
+    #lstm_save = torch.load('./torch_models/LSTMS_models_'+str(type_ts_)+'/'+country+last_pth)
     model = LSTM(seq_length=4,input_size = 1,hidden_size = 4,num_layers = 1,num_classes = 1)
     model.load_state_dict(lstm_save)
     arima_path = './torch_models/ARIMA_models_'+type_ts_+'/'+country+str(type_ts_)+'.pkl'
