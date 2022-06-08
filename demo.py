@@ -10,7 +10,7 @@ from torch.autograd import Variable
 from sklearn.preprocessing import MinMaxScaler
 from src.helpers import predict_model, prob_model
 from src.NNClassifiers.NNmodels import NNclassifier
-from src.Forecast.LSTM_ARIMA import sliding_windows,LSTM,train_lstm,predict_future_jojojo,plot_ts,data_train,
+from src.Forecast.LSTM_ARIMA import sliding_windows,LSTM,train_lstm,predict_future_jojojo,plot_ts,data_train
 
 #Data cases
 cases_who = pd.read_csv('https://raw.githubusercontent.com/ArtemioPadilla/MachineLearningAndCOVID/main/Datasets/SDG-3-Health/WHO-COVID-19-global-data-up.csv')
