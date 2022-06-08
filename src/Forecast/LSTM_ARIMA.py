@@ -121,7 +121,7 @@ def data_train(country, window, time,type_ts ):
   return trainX, trainY
 
 trainX,trainY= data_train("Afghanistan", 4, 30, "New_cases")
-stm = train_lstm(trainX,trainY)
+lstm = train_lstm(trainX,trainY)
 
 
 def plot_ts(time, window, country,type_ts ):
