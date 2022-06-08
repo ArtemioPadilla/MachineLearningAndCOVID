@@ -26,7 +26,8 @@ classifier_symptoms = load_model('./torch_models/model_diagnosis.pth')
 classifier_hosp = load_model('./torch_models/model_hosp.pth')
 classifier_death = load_model('./torch_models/model_death.pth')
 
-afganistan = load_model('./torch_models/LSTMS_models_New_cases/Afghanistan_New_cases.pth')
+#afganistan = load_model('./torch_models/LSTMS_models_New_cases/Afghanistan_New_cases.pth')
+
 #classifier_symptoms = torch.load('./torch_models/model_diagnosis.pth', map_location=torch.device(device))
 #classifier_hosp = torch.load('./torch_models/model_hosp.pth', map_location=torch.device(device))
 #classifier_death = torch.load('./torch_models/model_death.pth', map_location=torch.device(device))
@@ -73,9 +74,9 @@ if analysis == "LSTM-ARIMA forecast":
     #lstm = load_model('./torch_models/LSTMS_models_New_cases/Afghanistan_New_cases.pth')
     #lstm_save = load_model('./torch_models/LSTM_models_'+str(type_ts_)+'/'+country+'_New_cases.pth')
     if type_ts_=="New_cases":
-        last_pth = '_New_deaths.pth'
+        last_pth = '_New_cases.pth'
     else:
-         last_pth = 'New_cases.pth'
+         last_pth = 'New_deaths.pth'
 
     st.markdown('./torch_models/LSTMS_models_'+str(type_ts_)+'/'+country+last_pth)
     #lstm_save = load_model('./torch_models/LSTMS_models_'+str(type_ts_)+'/'+country+last_pth)
