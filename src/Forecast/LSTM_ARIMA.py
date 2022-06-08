@@ -22,17 +22,6 @@ sc = MinMaxScaler()
 #                                   LSTM FUNCTIONS
 # -------------------------------------------------------------------------
 
-def sliding_windows(data, seq_length):
-    x = []
-    y = []
-
-    for i in range(len(data)-seq_length-1):
-        _x = data[i:(i+seq_length)]
-        _y = data[i+seq_length]
-        x.append(_x)
-        y.append(_y)
-
-    return np.array(x),np.array(y)
 
 class LSTM(nn.Module):
 
@@ -66,65 +55,18 @@ class LSTM(nn.Module):
         
         return out
 
-def train_lstm(trainX,trainY, seq_length=4, num_epochs = 500,learning_rate = 0.01,input_size = 1,hidden_size = 2,num_layers = 1,num_classes = 1):
-  lstm = LSTM(seq_length, num_classes, input_size, hidden_size, num_layers)
 
-  criterion = torch.nn.MSELoss()    # mean-squared error for regression
-  optimizer = torch.optim.Adam(lstm.parameters(), lr=learning_rate)
-  #optimizer = torch.optim.SGD(lstm.,(), lr=learning_rate)
-
-  # Train the model
-  for epoch in range(num_epochs):
-      outputs = lstm(trainX)
-      optimizer.zero_grad()
-      
-      # obtain the loss function
-      loss = criterion(outputs, trainY)
-      
-      loss.backward()
-      
-      optimizer.step()
-      if epoch % 10 == 0:
-        print("Epoch: %d, loss: %1.5f" % (epoch, loss.item()))
-  return lstm
-
-def predict_future_jojojo(data_last,time_future, window):
+def predict_future_jojojo(model,data_last,time_future, window):
   predictions = data_last
-  lstm.eval()
+  model.eval()
   for _ in range(time_future):
-    train_predict = lstm(Variable(torch.Tensor(np.array([predictions[-window:]]).reshape(-1,window,1)))).data.numpy()
+    train_predict = model(Variable(torch.Tensor(np.array([predictions[-window:]]).reshape(-1,window,1)))).data.numpy()
     predictions.append(train_predict[0][0])
   data_predict = sc.inverse_transform(np.array(predictions).reshape(-1,1))
   return data_predict
 
-def data_train(country, window, time,type_ts ):
-  #Filtramos datos
-  training_set =cases_who[cases_who.Country ==country][cases_who[type_ts] !=0 ]
-  sc = MinMaxScaler()
-  training_data = sc.fit_transform(training_set[type_ts].values.reshape(-1, 1))
-  
-  num_layers = 1
-  seq_length = window
-  x, y = sliding_windows(training_data, seq_length)
-  train_size = int(len(y) * 0.80)
-  test_size = len(y) - train_size
 
-  #Conjuntos de entrenamiento y prueba
-  dataX = Variable(torch.Tensor(np.array(x)))
-  dataY = Variable(torch.Tensor(np.array(y)))
-
-  trainX = Variable(torch.Tensor(np.array(x[0:train_size])))
-  trainY = Variable(torch.Tensor(np.array(y[0:train_size])))
-
-  testX = Variable(torch.Tensor(np.array(x[train_size:len(x)])))
-  testY = Variable(torch.Tensor(np.array(y[train_size:len(y)])))
-  return trainX, trainY
-
-trainX,trainY= data_train("Afghanistan", 4, 30, "New_cases")
-lstm = train_lstm(trainX,trainY)
-
-
-def plot_ts(time, window, country,type_ts ):
+def plot_ts(model,time, window, country,type_ts ):
   #Filtramos datos
   training_set =cases_who[cases_who.Country ==country][cases_who[type_ts] !=0 ]
   #sc = MinMaxScaler()
@@ -132,29 +74,11 @@ def plot_ts(time, window, country,type_ts ):
   
   num_layers = 1
   seq_length = window
-  x, y = sliding_windows(training_data, seq_length)
-  train_size = int(len(y) * 0.80)
-  test_size = len(y) - train_size
-
-  #Conjuntos de entrenamiento y prueba
-  dataX = Variable(torch.Tensor(np.array(x)))
-  dataY = Variable(torch.Tensor(np.array(y)))
-
-  trainX = Variable(torch.Tensor(np.array(x[0:train_size])))
-  trainY = Variable(torch.Tensor(np.array(y[0:train_size])))
-
-  testX = Variable(torch.Tensor(np.array(x[train_size:len(x)])))
-  testY = Variable(torch.Tensor(np.array(y[train_size:len(y)])))
-
+  
   #Entrenamos
   #lstm = tain_lstm(trainX,trainY)
-  lstm.eval()
-
-  train_predict = lstm(dataX)
-
-  data_predict = train_predict.data.numpy()
-  dataY_plot = dataY.data.numpy()
-
+  model.eval()
+  
   #pred_future = predict_future_jojojo(data_predict[-window:].reshape(1,window)[0].tolist(),time, window)  
   pred_future = predict_future_jojojo(training_data[-window:].reshape(1,window)[0].tolist(),time, window)  
 
