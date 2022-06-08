@@ -4,6 +4,7 @@
 
 import numpy as np
 import pandas as pd
+import pickle
 import torch
 import torch.nn as nn
 from torch.autograd import Variable
@@ -66,7 +67,7 @@ def predict_future_jojojo(model,data_last,time_future, window):
   return data_predict
 
 
-def plot_ts(model,time, window, country,type_ts ):
+def plot_ts(model,arima_path,time, window, country,type_ts ):
   #Filtramos datos
   training_set =cases_who[cases_who.Country ==country][cases_who[type_ts] !=0 ]
   #sc = MinMaxScaler()
@@ -82,28 +83,10 @@ def plot_ts(model,time, window, country,type_ts ):
   #pred_future = predict_future_jojojo(data_predict[-window:].reshape(1,window)[0].tolist(),time, window)  
   pred_future = predict_future_jojojo(training_data[-window:].reshape(1,window)[0].tolist(),time, window)  
 
-  data_predict = sc.inverse_transform(data_predict)
-  dataY_plot = sc.inverse_transform(dataY_plot)
-
   date_pred = pd.date_range(training_set.Date_reported[-2:].values[0], periods=time)
   
-  
-  dates_final = np.hstack([training_set.Date_reported, date_pred])
-  
-  predicts_final = np.vstack([training_set[type_ts][-1:], pred_future])
-
-  
-  model_arima = pm.auto_arima(training_set[type_ts], start_p=0, start_q=0,
-                    test='kpss',
-                    max_p=3, max_q=3,
-                    m=1,
-                    d=None,
-                    trace=False,
-                    error_action='ignore',
-                    suppress_warnings=True,
-                    stepwise=True)
-  
-  fc = model_arima.predict(n_periods=time, return_conf_int=False)
+  with open(arima_path, 'rb') as pkl:
+    fc = pickle.load(pkl).predict(n_periods=time, return_conf_int=False)
   
   fig = go.Figure()
 
