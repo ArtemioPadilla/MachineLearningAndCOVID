@@ -56,10 +56,10 @@ elif analysis == "Cases and deaths chart":
             algorithm""")
     type = st.selectbox("Pick type", ["Cases", "Deaths"])
     if type == "Cases":
-        fig = px.scatter(cases_who, x="Date_reported", y="New_cases", color="Country")
+        fig = px.line(cases_who, x="Date_reported", y="New_cases", color="Country")
     else:
-        fig = px.scatter(cases_who, x="Date_reported", y="New_deaths", color="Country")
-    st.plotly_chart(fig, use_container_width=True)
+        fig = px.line(cases_who, x="Date_reported", y="New_deaths", color="Country")
+    st.plotly_chart(fig)
 
 elif analysis == "Neural Network Classifier":
     with st.expander("See explanation"):
