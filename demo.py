@@ -41,6 +41,10 @@ analysis = st.radio("Please enter which type of application you want to explore:
 if analysis == "LSTM-ARIMA forecast":
     with st.expander("See explanation"):
         st.markdown("EXPLANATION FOR LSTMs")
+        st.markdown("LSTM cells are used in recurrent neural networks that learn to predict the future from sequences of variable lengths. That RNN work with any kind of sequential data and, unlike ARIMA are not restricted to time series. ")
+        st.markdown("The basic architecture of a LSTM RNN is:")
+        st.image("https://raw.githubusercontent.com/ArtemioPadilla/MachineLearningAndCOVID/main/src/Forecast/RNN_LSTM.JPG")  
+        st.markdown("The main objective of this section is to perform a comparison of predictions using an lstm neural network and arima time series model.")
         st.code("""for i in range(5):
             algorithm""")
 
@@ -87,7 +91,7 @@ if analysis == "LSTM-ARIMA forecast":
 elif analysis == "Cases and deaths chart":
     with st.expander("See explanation"):
         st.markdown("EXPLANATION FOR LSTMs")
-        st.markdown("LSTM cells are used in recurrent neural networks that learn to predict the future from sequences of variable lengths. That RNN work with any kind of sequential data and, unlike ARIMA are not restricted to time series. ")
+        
         
         st.code("""for i in range(5):
             algorithm""")
