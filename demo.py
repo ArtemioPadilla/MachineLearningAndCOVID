@@ -5,6 +5,12 @@ from time import sleep
 import torch
 from src.helpers import predict_model, prob_model
 from src.NNClassifiers.NNmodels import NNclassifier
+
+#Data cases
+cases_who = pd.read_csv('https://raw.githubusercontent.com/ArtemioPadilla/MachineLearningAndCOVID/main/Datasets/SDG-3-Health/WHO-COVID-19-global-data-up.csv')
+aux =  cases_who[cases_who.New_cases !=0]. groupby('Country').sum()
+contries = list(aux[aux.New_cases>10000].index)
+
 # import lstm
 device = "cpu"#torch.device("cuda" if torch.cuda.is_available() else "cpu")
 classifier_symptoms = torch.load('./torch_models/model_diagnosis.pth', map_location=torch.device(device))
@@ -27,7 +33,7 @@ if analysis == "LSTM forecast":
             algorithm""")
 
     country_list = ["Mexico", "USA", "Israel"]
-    country = st.selectbox("Pick a country to analyse", country_list)
+    country = st.selectbox("Pick a country to analyse", contries)
     st.slider(label= "Select the window of time in days to predict", min_value=1, max_value=30, value=None, step=None)
     window_to_predict = st.write(f"The country you choose is {country}")
     st.metric(label = "Test", value=1, delta=-0.1, delta_color="normal")
