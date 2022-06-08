@@ -53,6 +53,7 @@ if analysis == "LSTM forecast":
     sc = MinMaxScaler()
     type_ts_ = type_ts.replace(" ", "_")
     trainX,trainY= data_train(country, window, window_to_predict,type_ts_ )
+    
     #Entrenamos
     lstm = train_lstm(trainX,trainY)
     fig = plot_ts(window_to_predict, window, country , type_ts_)
