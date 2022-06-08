@@ -40,10 +40,10 @@ if analysis == "LSTM forecast":
 
     country_list = ["Mexico", "USA", "Israel"]
     country = st.selectbox("Pick a country to analyse", contries)
-    st.slider(label= "Select the window of time in days to predict", min_value=1, max_value=30, value=None, step=None)
-    window_to_predict = st.write(f"The country you choose is {country}")
+    window_to_predict = st.slider(label= "Select the window of time in days to predict", min_value=1, max_value=30, value=None, step=None)
+    st.write(f"The country you choose is {country}")
     type_ts = st.radio("Count Type", ["New cases","New deaths"])
-    st.metric(label = "Test", value=1, delta=-0.1, delta_color="normal")
+    #st.metric(label = "Test", value=1, delta=-0.1, delta_color="normal")
     # Example plot
     # Get LSTM prediction for country
     # data, prediction = lstm(country, window_to_predict)
