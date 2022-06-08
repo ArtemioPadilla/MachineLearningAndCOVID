@@ -56,16 +56,16 @@ if analysis == "LSTM forecast":
     #trainX,trainY= data_train(country, window, window_to_predict,type_ts_ )
 
     #Entrenamos
-    lstm_save = torch.load('./torch_models/LSTM_models_'+type_ts_+'/'+country+'_New_cases.pth', map_location=torch.device("cpu"))
-    model = LSTM(seq_length=4,input_size = 1,hidden_size = 4,num_layers = 1,num_classes = 1)
-    model.load_state_dict(lstm_save)
-    arima_path = './torch_models/ARIMA_models_'+type_ts_+'/'+country+'New_cases.pkl'
-    fig = plot_ts(model,arima_path, window_to_predict, window, country , type_ts_)
-    st.plotly_chart(fig)
-    #url = "https://raw.githubusercontent.com/ArtemioPadilla/ML-Datasets/main/Casos_Diarios_Estado_Nacional_Defunciones_20210121.csv"
-    #df = pd.read_csv(url)
-    #st.dataframe(df.iloc[:,3:])
-    #st.line_chart(df.iloc[:,3:])
+    #lstm_save = torch.load('./torch_models/LSTM_models_'+type_ts_+'/'+country+'_New_cases.pth', map_location=torch.device("cpu"))
+    #model = LSTM(seq_length=4,input_size = 1,hidden_size = 4,num_layers = 1,num_classes = 1)
+    #model.load_state_dict(lstm_save)
+    #arima_path = './torch_models/ARIMA_models_'+type_ts_+'/'+country+'New_cases.pkl'
+    #fig = plot_ts(model,arima_path, window_to_predict, window, country , type_ts_)
+    #st.plotly_chart(fig)
+    url = "https://raw.githubusercontent.com/ArtemioPadilla/ML-Datasets/main/Casos_Diarios_Estado_Nacional_Defunciones_20210121.csv"
+    df = pd.read_csv(url)
+    st.dataframe(df.iloc[:,3:])
+    st.line_chart(df.iloc[:,3:])
     
 elif analysis == "Cases and deaths chart":
     with st.expander("See explanation"):
