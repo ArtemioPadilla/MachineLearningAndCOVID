@@ -94,10 +94,10 @@ def plot_ts(model,arima_path,time, window, country,type_ts ):
   fig.add_trace(go.Scatter(x = training_set.Date_reported, y=training_set[type_ts],
                       mode='lines',
                       name='Observaciones reales'))
-  fig.add_trace(go.Scatter(x=date_pred.astype('str')[1:], y=pred_future.reshape(1, len(pred_future))[0],
+  fig.add_trace(go.Scatter(x=date_pred.astype('str')[1:], y=np.hstack([np.array(training_set[type_ts][-1:]),pred_future.reshape(1, len(pred_future))[0]]),
                       mode='lines+markers',
                       name='Predicciones con LSTM'))
-  fig.add_trace(go.Scatter(x=date_pred.astype('str')[1:], y=fc,
+  fig.add_trace(go.Scatter(x=date_pred.astype('str')[1:], y=np.hstack([np.array(training_set[type_ts][-1:]),fc]),
                       mode='lines+markers',
                       name='Predicciones con ARIMA'))
   
