@@ -69,7 +69,7 @@ def predict_future_jojojo(model,data_last,time_future, window):
 
 def plot_ts(model,arima_path,time, window, country,type_ts ):
   #Filtramos datos
-  training_set =cases_who[cases_who.Country ==country][cases_who[type_ts] !=0 ]
+  training_set =cases_who[cases_who.Country ==country]#[cases_who[type_ts] !=0 ]
   #sc = MinMaxScaler()
   training_data = sc.fit_transform(training_set[type_ts].values.reshape(-1, 1))
   
@@ -83,7 +83,7 @@ def plot_ts(model,arima_path,time, window, country,type_ts ):
   #pred_future = predict_future_jojojo(data_predict[-window:].reshape(1,window)[0].tolist(),time, window)  
   pred_future = predict_future_jojojo(model,training_data[-window:].reshape(1,window)[0].tolist(),time, window)  
 
-  date_pred = pd.date_range(training_set.Date_reported[-2:].values[0], periods=time)
+  date_pred = pd.date_range(training_set.Date_reported[-1:].values[0], periods=time)
   
   with open(arima_path, 'rb') as pkl:
     fc = pickle.load(pkl).predict(n_periods=time, return_conf_int=False)
