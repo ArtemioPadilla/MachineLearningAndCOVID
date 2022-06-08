@@ -3,7 +3,7 @@ import streamlit as st
 import pandas as pd
 from time import sleep
 import torch
-import plotly.express as px
+import plotly.graph_objects as go
 from src.helpers import predict_model, prob_model
 from src.NNClassifiers.NNmodels import NNclassifier
 
