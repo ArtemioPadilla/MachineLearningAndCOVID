@@ -22,631 +22,653 @@
      inkscape:pageopacity="0"
      inkscape:pagecheckerboard="0"
      showgrid="false"
-     inkscape:zoom="0.88035126"
-     inkscape:cx="960.41209"
-     inkscape:cy="455.5"
+     inkscape:zoom="0.44017563"
+     inkscape:cx="1218.8317"
+     inkscape:cy="772.41895"
      inkscape:window-width="1920"
      inkscape:window-height="1011"
      inkscape:window-x="0"
      inkscape:window-y="32"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg89846" />
+     inkscape:current-layer="layer1" />
   <g
-     transform="translate(-716.7262302930922,-490.6339648122946) scale(1.8000038595870258)"
-     id="g89844">
+     inkscape:groupmode="layer"
+     id="layer1"
+     inkscape:label="Layer 1"
+     style="display:inline">
     <rect
-       class="rect"
-       id="0_0"
-       width="1"
-       height="100"
-       x="535.7359312880716"
-       y="455"
-       style="fill: rgb(160, 160, 160); stroke: black; stroke-width: 1; opacity: 0.8;" />
-    <rect
-       class="rect"
-       id="1_0"
-       width="1"
-       height="100"
-       x="623.7359312880716"
-       y="395"
-       style="fill: rgb(160, 160, 160); stroke: black; stroke-width: 1; opacity: 0.8;" />
-    <rect
-       class="rect"
-       id="1_1"
-       width="1"
-       height="100"
-       x="631.7359312880716"
-       y="403"
-       style="fill: rgb(224, 224, 224); stroke: black; stroke-width: 1; opacity: 0.8;" />
-    <rect
-       class="rect"
-       id="1_2"
-       width="1"
-       height="100"
-       x="639.7359312880716"
-       y="411"
-       style="fill: rgb(160, 160, 160); stroke: black; stroke-width: 1; opacity: 0.8;" />
-    <rect
-       class="rect"
-       id="1_3"
-       width="1"
-       height="100"
-       x="647.7359312880716"
-       y="419"
-       style="fill: rgb(224, 224, 224); stroke: black; stroke-width: 1; opacity: 0.8;" />
-    <rect
-       class="rect"
-       id="1_4"
-       width="1"
-       height="100"
-       x="655.7359312880716"
-       y="427"
-       style="fill: rgb(160, 160, 160); stroke: black; stroke-width: 1; opacity: 0.8;" />
-    <rect
-       class="rect"
-       id="1_5"
-       width="1"
-       height="100"
-       x="663.7359312880716"
-       y="435"
-       style="fill: rgb(224, 224, 224); stroke: black; stroke-width: 1; opacity: 0.8;" />
-    <rect
-       class="rect"
-       id="1_6"
-       width="1"
-       height="100"
-       x="671.7359312880716"
-       y="443"
-       style="fill: rgb(160, 160, 160); stroke: black; stroke-width: 1; opacity: 0.8;" />
-    <rect
-       class="rect"
-       id="1_7"
-       width="1"
-       height="100"
-       x="679.7359312880716"
-       y="451"
-       style="fill: rgb(224, 224, 224); stroke: black; stroke-width: 1; opacity: 0.8;" />
-    <rect
-       class="rect"
-       id="1_8"
-       width="1"
-       height="100"
-       x="687.7359312880716"
-       y="459"
-       style="fill: rgb(160, 160, 160); stroke: black; stroke-width: 1; opacity: 0.8;" />
-    <rect
-       class="rect"
-       id="1_9"
-       width="1"
-       height="100"
-       x="695.7359312880716"
-       y="467"
-       style="fill: rgb(224, 224, 224); stroke: black; stroke-width: 1; opacity: 0.8;" />
-    <rect
-       class="rect"
-       id="1_10"
-       width="1"
-       height="100"
-       x="703.7359312880716"
-       y="475"
-       style="fill: rgb(160, 160, 160); stroke: black; stroke-width: 1; opacity: 0.8;" />
-    <rect
-       class="rect"
-       id="1_11"
-       width="1"
-       height="100"
-       x="711.7359312880716"
-       y="483"
-       style="fill: rgb(224, 224, 224); stroke: black; stroke-width: 1; opacity: 0.8;" />
-    <rect
-       class="rect"
-       id="1_12"
-       width="1"
-       height="100"
-       x="719.7359312880716"
-       y="491"
-       style="fill: rgb(160, 160, 160); stroke: black; stroke-width: 1; opacity: 0.8;" />
-    <rect
-       class="rect"
-       id="1_13"
-       width="1"
-       height="100"
-       x="727.7359312880716"
-       y="499"
-       style="fill: rgb(224, 224, 224); stroke: black; stroke-width: 1; opacity: 0.8;" />
-    <rect
-       class="rect"
-       id="1_14"
-       width="1"
-       height="100"
-       x="735.7359312880716"
-       y="507"
-       style="fill: rgb(160, 160, 160); stroke: black; stroke-width: 1; opacity: 0.8;" />
-    <rect
-       class="rect"
-       id="1_15"
-       width="1"
-       height="100"
-       x="743.7359312880716"
-       y="515"
-       style="fill: rgb(224, 224, 224); stroke: black; stroke-width: 1; opacity: 0.8;" />
-    <rect
-       class="rect"
-       id="2_0"
-       width="1"
-       height="50"
-       x="718.7359312880716"
-       y="331"
-       style="fill: rgb(160, 160, 160); stroke: black; stroke-width: 1; opacity: 0.8;" />
-    <rect
-       class="rect"
-       id="2_1"
-       width="1"
-       height="50"
-       x="726.7359312880716"
-       y="339"
-       style="fill: rgb(224, 224, 224); stroke: black; stroke-width: 1; opacity: 0.8;" />
-    <rect
-       class="rect"
-       id="2_2"
-       width="1"
-       height="50"
-       x="734.7359312880716"
-       y="347"
-       style="fill: rgb(160, 160, 160); stroke: black; stroke-width: 1; opacity: 0.8;" />
-    <rect
-       class="rect"
-       id="2_3"
-       width="1"
-       height="50"
-       x="742.7359312880716"
-       y="355"
-       style="fill: rgb(224, 224, 224); stroke: black; stroke-width: 1; opacity: 0.8;" />
-    <rect
-       class="rect"
-       id="2_4"
-       width="1"
-       height="50"
-       x="750.7359312880716"
-       y="363"
-       style="fill: rgb(160, 160, 160); stroke: black; stroke-width: 1; opacity: 0.8;" />
-    <rect
-       class="rect"
-       id="2_5"
-       width="1"
-       height="50"
-       x="758.7359312880716"
-       y="371"
-       style="fill: rgb(224, 224, 224); stroke: black; stroke-width: 1; opacity: 0.8;" />
-    <rect
-       class="rect"
-       id="2_6"
-       width="1"
-       height="50"
-       x="766.7359312880716"
-       y="379"
-       style="fill: rgb(160, 160, 160); stroke: black; stroke-width: 1; opacity: 0.8;" />
-    <rect
-       class="rect"
-       id="2_7"
-       width="1"
-       height="50"
-       x="774.7359312880716"
-       y="387"
-       style="fill: rgb(224, 224, 224); stroke: black; stroke-width: 1; opacity: 0.8;" />
-    <rect
-       class="rect"
-       id="2_8"
-       width="1"
-       height="50"
-       x="782.7359312880716"
-       y="395"
-       style="fill: rgb(160, 160, 160); stroke: black; stroke-width: 1; opacity: 0.8;" />
-    <rect
-       class="rect"
-       id="2_9"
-       width="1"
-       height="50"
-       x="790.7359312880716"
-       y="403"
-       style="fill: rgb(224, 224, 224); stroke: black; stroke-width: 1; opacity: 0.8;" />
-    <rect
-       class="rect"
-       id="2_10"
-       width="1"
-       height="50"
-       x="798.7359312880716"
-       y="411"
-       style="fill: rgb(160, 160, 160); stroke: black; stroke-width: 1; opacity: 0.8;" />
-    <rect
-       class="rect"
-       id="2_11"
-       width="1"
-       height="50"
-       x="806.7359312880716"
-       y="419"
-       style="fill: rgb(224, 224, 224); stroke: black; stroke-width: 1; opacity: 0.8;" />
-    <rect
-       class="rect"
-       id="2_12"
-       width="1"
-       height="50"
-       x="814.7359312880716"
-       y="427"
-       style="fill: rgb(160, 160, 160); stroke: black; stroke-width: 1; opacity: 0.8;" />
-    <rect
-       class="rect"
-       id="2_13"
-       width="1"
-       height="50"
-       x="822.7359312880716"
-       y="435"
-       style="fill: rgb(224, 224, 224); stroke: black; stroke-width: 1; opacity: 0.8;" />
-    <rect
-       class="rect"
-       id="2_14"
-       width="1"
-       height="50"
-       x="830.7359312880716"
-       y="443"
-       style="fill: rgb(160, 160, 160); stroke: black; stroke-width: 1; opacity: 0.8;" />
-    <rect
-       class="rect"
-       id="2_15"
-       width="1"
-       height="50"
-       x="838.7359312880716"
-       y="451"
-       style="fill: rgb(224, 224, 224); stroke: black; stroke-width: 1; opacity: 0.8;" />
-    <rect
-       class="rect"
-       id="2_16"
-       width="1"
-       height="50"
-       x="846.7359312880716"
-       y="459"
-       style="fill: rgb(160, 160, 160); stroke: black; stroke-width: 1; opacity: 0.8;" />
-    <rect
-       class="rect"
-       id="2_17"
-       width="1"
-       height="50"
-       x="854.7359312880716"
-       y="467"
-       style="fill: rgb(224, 224, 224); stroke: black; stroke-width: 1; opacity: 0.8;" />
-    <rect
-       class="rect"
-       id="2_18"
-       width="1"
-       height="50"
-       x="862.7359312880716"
-       y="475"
-       style="fill: rgb(160, 160, 160); stroke: black; stroke-width: 1; opacity: 0.8;" />
-    <rect
-       class="rect"
-       id="2_19"
-       width="1"
-       height="50"
-       x="870.7359312880716"
-       y="483"
-       style="fill: rgb(224, 224, 224); stroke: black; stroke-width: 1; opacity: 0.8;" />
-    <rect
-       class="rect"
-       id="2_20"
-       width="1"
-       height="50"
-       x="878.7359312880716"
-       y="491"
-       style="fill: rgb(160, 160, 160); stroke: black; stroke-width: 1; opacity: 0.8;" />
-    <rect
-       class="rect"
-       id="2_21"
-       width="1"
-       height="50"
-       x="886.7359312880716"
-       y="499"
-       style="fill: rgb(224, 224, 224); stroke: black; stroke-width: 1; opacity: 0.8;" />
-    <rect
-       class="rect"
-       id="2_22"
-       width="1"
-       height="50"
-       x="894.7359312880716"
-       y="507"
-       style="fill: rgb(160, 160, 160); stroke: black; stroke-width: 1; opacity: 0.8;" />
-    <rect
-       class="rect"
-       id="2_23"
-       width="1"
-       height="50"
-       x="902.7359312880716"
-       y="515"
-       style="fill: rgb(224, 224, 224); stroke: black; stroke-width: 1; opacity: 0.8;" />
-    <rect
-       class="rect"
-       id="2_24"
-       width="1"
-       height="50"
-       x="910.7359312880716"
-       y="523"
-       style="fill: rgb(160, 160, 160); stroke: black; stroke-width: 1; opacity: 0.8;" />
-    <rect
-       class="rect"
-       id="2_25"
-       width="1"
-       height="50"
-       x="918.7359312880716"
-       y="531"
-       style="fill: rgb(224, 224, 224); stroke: black; stroke-width: 1; opacity: 0.8;" />
-    <rect
-       class="rect"
-       id="2_26"
-       width="1"
-       height="50"
-       x="926.7359312880716"
-       y="539"
-       style="fill: rgb(160, 160, 160); stroke: black; stroke-width: 1; opacity: 0.8;" />
-    <rect
-       class="rect"
-       id="2_27"
-       width="1"
-       height="50"
-       x="934.7359312880716"
-       y="547"
-       style="fill: rgb(224, 224, 224); stroke: black; stroke-width: 1; opacity: 0.8;" />
-    <rect
-       class="rect"
-       id="2_28"
-       width="1"
-       height="50"
-       x="942.7359312880716"
-       y="555"
-       style="fill: rgb(160, 160, 160); stroke: black; stroke-width: 1; opacity: 0.8;" />
-    <rect
-       class="rect"
-       id="2_29"
-       width="1"
-       height="50"
-       x="950.7359312880716"
-       y="563"
-       style="fill: rgb(224, 224, 224); stroke: black; stroke-width: 1; opacity: 0.8;" />
-    <rect
-       class="rect"
-       id="2_30"
-       width="1"
-       height="50"
-       x="958.7359312880716"
-       y="571"
-       style="fill: rgb(160, 160, 160); stroke: black; stroke-width: 1; opacity: 0.8;" />
-    <rect
-       class="rect"
-       id="2_31"
-       width="1"
-       height="50"
-       x="966.7359312880716"
-       y="579"
-       style="fill: rgb(224, 224, 224); stroke: black; stroke-width: 1; opacity: 0.8;" />
-    <rect
-       class="conv"
-       id="conv_0"
-       width="1"
-       height="1"
-       x="535.7359312880716"
-       y="517.6896778207902"
-       style="fill-opacity: 0; stroke: black; stroke-width: 1; stroke-opacity: 0.8;" />
-    <rect
-       class="conv"
-       id="conv_1"
-       width="1"
-       height="1"
-       x="743.7359312880716"
-       y="535.4087050012646"
-       style="fill-opacity: 0; stroke: black; stroke-width: 1; stroke-opacity: 0.8;" />
-    <line
-       class="link"
-       id="line89796"
-       x1="536.7359312880716"
-       y1="518.6896778207902"
-       x2="744.2937102204614"
-       y2="578.3229068896871"
-       style="stroke: black; stroke-width: 0.5; stroke-opacity: 0.8;" />
-    <line
-       class="link"
-       id="line89798"
-       x1="536.7359312880716"
-       y1="517.6896778207902"
-       x2="744.2937102204614"
-       y2="578.3229068896871"
-       style="stroke: black; stroke-width: 0.5; stroke-opacity: 0.8;" />
-    <line
-       class="link"
-       id="line89800"
-       x1="744.7359312880716"
-       y1="536.4087050012646"
-       x2="967.3223471166386"
-       y2="589.3074267683155"
-       style="stroke: black; stroke-width: 0.5; stroke-opacity: 0.8;" />
-    <line
-       class="link"
-       id="line89802"
-       x1="744.7359312880716"
-       y1="535.4087050012646"
-       x2="967.3223471166386"
-       y2="589.3074267683155"
-       style="stroke: black; stroke-width: 0.5; stroke-opacity: 0.8;" />
-    <polygon
-       class="poly"
-       id="fc_0"
-       points="867.7359312880716,314.0786437626905 877.7359312880716,314.0786437626905 1160.5786437626905,596.9213562373095 1150.5786437626905,596.9213562373095"
-       style="fill: rgb(224, 224, 224); stroke: black; stroke-width: 1; opacity: 0.8;" />
-    <polygon
-       class="poly"
-       id="fc_1"
-       points="1162.5786437626907,384.78932188134524 1172.5786437626907,384.78932188134524 1314.0000000000002,526.2106781186548 1304.0000000000002,526.2106781186548"
-       style="fill: rgb(224, 224, 224); stroke: black; stroke-width: 1; opacity: 0.8;" />
-    <polygon
-       class="poly"
-       id="fc_2"
-       points="1316,420.14466094067257 1326,420.14466094067257 1396.7106781186546,490.8553390593273 1386.7106781186546,490.8553390593273"
-       style="fill: rgb(224, 224, 224); stroke: black; stroke-width: 1; opacity: 0.8;" />
-    <polygon
-       class="poly"
-       id="fc_3"
-       points="1398.7106781186549,454.79289321881345 1408.7106781186549,454.79289321881345 1410.124891681028,456.20710678118655 1400.124891681028,456.20710678118655"
-       style="fill: rgb(224, 224, 224); stroke: black; stroke-width: 1; opacity: 0.8;" />
-    <line
-       class="line"
-       id="line89808"
-       x1="967.7359312880716"
-       y1="580"
-       x2="1150.5786437626907"
-       y2="596.9213562373095"
-       style="stroke: black; stroke-width: 0.5; stroke-opacity: 0.8; opacity: 1;" />
-    <line
-       class="line"
-       id="line89810"
-       x1="719.7359312880716"
-       y1="331"
-       x2="867.7359312880716"
-       y2="314.0786437626905"
-       style="stroke: black; stroke-width: 0.5; stroke-opacity: 0.8; opacity: 1;" />
-    <line
-       class="line"
-       id="line89812"
-       x1="1160.5786437626907"
-       y1="596.9213562373095"
-       x2="1304"
-       y2="526.2106781186546"
-       style="stroke: black; stroke-width: 0.5; stroke-opacity: 0.8; opacity: 1;" />
-    <line
-       class="line"
-       id="line89814"
-       x1="877.7359312880716"
-       y1="314.0786437626905"
-       x2="1162.5786437626907"
-       y2="384.78932188134524"
-       style="stroke: black; stroke-width: 0.5; stroke-opacity: 0.8; opacity: 1;" />
-    <line
-       class="line"
-       id="line89816"
-       x1="1314"
-       y1="526.2106781186546"
-       x2="1386.7106781186549"
-       y2="490.8553390593273"
-       style="stroke: black; stroke-width: 0.5; stroke-opacity: 0.8; opacity: 1;" />
-    <line
-       class="line"
-       id="line89818"
-       x1="1172.5786437626907"
-       y1="384.78932188134524"
-       x2="1316"
-       y2="420.14466094067257"
-       style="stroke: black; stroke-width: 0.5; stroke-opacity: 0.8; opacity: 1;" />
-    <line
-       class="line"
-       id="line89820"
-       x1="1396.7106781186549"
-       y1="490.8553390593273"
-       x2="1400.124891681028"
-       y2="456.20710678118655"
-       style="stroke: black; stroke-width: 0.5; stroke-opacity: 0.8; opacity: 1;" />
-    <line
-       class="line"
-       id="line89822"
-       x1="1326"
-       y1="420.14466094067257"
-       x2="1398.7106781186549"
-       y2="454.79289321881345"
-       style="stroke: black; stroke-width: 0.5; stroke-opacity: 0.8; opacity: 1;" />
-    <text
-       class="text"
-       dy=".35em"
-       font-family="sans-serif"
-       x="595.4859312880716"
-       y="737.842712474619"
-       style="font-size: 16px; opacity: 1;"
-       id="text89824">Convolution</text>
-    <text
-       class="text"
-       dy=".35em"
-       font-family="sans-serif"
-       x="778.9859312880716"
-       y="737.842712474619"
-       style="font-size: 16px; opacity: 1;"
-       id="text89826">Convolution</text>
-    <text
-       class="text"
-       dy=".35em"
-       font-family="sans-serif"
-       x="973.4466094067263"
-       y="737.842712474619"
-       style="font-size: 16px; opacity: 1;"
-       id="text89828">Max-Pool</text>
-    <text
-       class="info"
-       dy="-0.30000001em"
-       font-family="sans-serif"
-       x="535.7359"
-       y="440"
-       style="font-size:16px"
-       id="text89830">1@Nx1</text>
-    <text
-       class="info"
-       dy="-0.30000001em"
-       font-family="sans-serif"
-       x="623.7359"
-       y="380"
-       style="font-size:16px"
-       id="text89832">16@Nx1</text>
-    <text
-       class="info"
-       dy="-0.30000001em"
-       font-family="sans-serif"
-       x="718.7359"
-       y="316"
-       style="font-size:16px"
-       id="text89834">32@N/2x1</text>
-    <text
-       class="info"
-       dy="-0.30000001em"
-       font-family="sans-serif"
-       x="867.7359"
-       y="299.07864"
-       style="font-size:16px"
-       id="text89836">1x32*N/2</text>
-    <text
-       class="info"
-       dy="-0.3em"
-       font-family="sans-serif"
-       x="1162.5786437626907"
-       y="369.78932188134524"
-       style="font-size: 16px;"
-       id="text89838">1x200</text>
-    <text
-       class="info"
-       dy="-0.3em"
-       font-family="sans-serif"
-       x="1316"
-       y="405.14466094067257"
-       style="font-size: 16px;"
-       id="text89840">1x100</text>
-    <text
-       class="info"
-       dy="-0.3em"
-       font-family="sans-serif"
-       x="1398.7106781186549"
-       y="439.79289321881345"
-       style="font-size: 16px;"
-       id="text89842">1x2</text>
+       style="fill:#e6e6e6;stroke-width:0.769018"
+       id="rect139630"
+       width="1934.1321"
+       height="929.66846"
+       x="-9.2372417"
+       y="-6.5424409" />
   </g>
-  <text
-     xml:space="preserve"
-     style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none"
-     x="1608.6685"
-     y="590.25507"
-     id="text120108"><tspan
-       sodipodi:role="line"
-       id="tspan120106"
-       x="1608.6685"
-       y="590.25507">FC</tspan></text>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Layer 2"
+     style="display:inline">
+    <g
+       transform="matrix(1.8000039,0,0,1.8000039,-811.04991,-487.15088)"
+       id="g89844">
+      <rect
+         class="rect"
+         id="0_0"
+         width="1"
+         height="100"
+         x="535.7359"
+         y="455"
+         style="opacity:0.8;fill:#a0a0a0;stroke:#000000;stroke-width:1" />
+      <rect
+         class="rect"
+         id="1_0"
+         width="1"
+         height="100"
+         x="623.7359"
+         y="395"
+         style="opacity:0.8;fill:#a0a0a0;stroke:#000000;stroke-width:1" />
+      <rect
+         class="rect"
+         id="1_1"
+         width="1"
+         height="100"
+         x="631.7359"
+         y="403"
+         style="opacity:0.8;fill:#e0e0e0;stroke:#000000;stroke-width:1" />
+      <rect
+         class="rect"
+         id="1_2"
+         width="1"
+         height="100"
+         x="639.7359"
+         y="411"
+         style="opacity:0.8;fill:#a0a0a0;stroke:#000000;stroke-width:1" />
+      <rect
+         class="rect"
+         id="1_3"
+         width="1"
+         height="100"
+         x="647.7359"
+         y="419"
+         style="opacity:0.8;fill:#e0e0e0;stroke:#000000;stroke-width:1" />
+      <rect
+         class="rect"
+         id="1_4"
+         width="1"
+         height="100"
+         x="655.7359"
+         y="427"
+         style="opacity:0.8;fill:#a0a0a0;stroke:#000000;stroke-width:1" />
+      <rect
+         class="rect"
+         id="1_5"
+         width="1"
+         height="100"
+         x="663.7359"
+         y="435"
+         style="opacity:0.8;fill:#e0e0e0;stroke:#000000;stroke-width:1" />
+      <rect
+         class="rect"
+         id="1_6"
+         width="1"
+         height="100"
+         x="671.7359"
+         y="443"
+         style="opacity:0.8;fill:#a0a0a0;stroke:#000000;stroke-width:1" />
+      <rect
+         class="rect"
+         id="1_7"
+         width="1"
+         height="100"
+         x="679.7359"
+         y="451"
+         style="opacity:0.8;fill:#e0e0e0;stroke:#000000;stroke-width:1" />
+      <rect
+         class="rect"
+         id="1_8"
+         width="1"
+         height="100"
+         x="687.7359"
+         y="459"
+         style="opacity:0.8;fill:#a0a0a0;stroke:#000000;stroke-width:1" />
+      <rect
+         class="rect"
+         id="1_9"
+         width="1"
+         height="100"
+         x="695.7359"
+         y="467"
+         style="opacity:0.8;fill:#e0e0e0;stroke:#000000;stroke-width:1" />
+      <rect
+         class="rect"
+         id="1_10"
+         width="1"
+         height="100"
+         x="703.7359"
+         y="475"
+         style="opacity:0.8;fill:#a0a0a0;stroke:#000000;stroke-width:1" />
+      <rect
+         class="rect"
+         id="1_11"
+         width="1"
+         height="100"
+         x="711.7359"
+         y="483"
+         style="opacity:0.8;fill:#e0e0e0;stroke:#000000;stroke-width:1" />
+      <rect
+         class="rect"
+         id="1_12"
+         width="1"
+         height="100"
+         x="719.7359"
+         y="491"
+         style="opacity:0.8;fill:#a0a0a0;stroke:#000000;stroke-width:1" />
+      <rect
+         class="rect"
+         id="1_13"
+         width="1"
+         height="100"
+         x="727.7359"
+         y="499"
+         style="opacity:0.8;fill:#e0e0e0;stroke:#000000;stroke-width:1" />
+      <rect
+         class="rect"
+         id="1_14"
+         width="1"
+         height="100"
+         x="735.7359"
+         y="507"
+         style="opacity:0.8;fill:#a0a0a0;stroke:#000000;stroke-width:1" />
+      <rect
+         class="rect"
+         id="1_15"
+         width="1"
+         height="100"
+         x="743.7359"
+         y="515"
+         style="opacity:0.8;fill:#e0e0e0;stroke:#000000;stroke-width:1" />
+      <rect
+         class="rect"
+         id="2_0"
+         width="1"
+         height="50"
+         x="718.7359"
+         y="331"
+         style="opacity:0.8;fill:#a0a0a0;stroke:#000000;stroke-width:1" />
+      <rect
+         class="rect"
+         id="2_1"
+         width="1"
+         height="50"
+         x="726.7359"
+         y="339"
+         style="opacity:0.8;fill:#e0e0e0;stroke:#000000;stroke-width:1" />
+      <rect
+         class="rect"
+         id="2_2"
+         width="1"
+         height="50"
+         x="734.7359"
+         y="347"
+         style="opacity:0.8;fill:#a0a0a0;stroke:#000000;stroke-width:1" />
+      <rect
+         class="rect"
+         id="2_3"
+         width="1"
+         height="50"
+         x="742.7359"
+         y="355"
+         style="opacity:0.8;fill:#e0e0e0;stroke:#000000;stroke-width:1" />
+      <rect
+         class="rect"
+         id="2_4"
+         width="1"
+         height="50"
+         x="750.7359"
+         y="363"
+         style="opacity:0.8;fill:#a0a0a0;stroke:#000000;stroke-width:1" />
+      <rect
+         class="rect"
+         id="2_5"
+         width="1"
+         height="50"
+         x="758.7359"
+         y="371"
+         style="opacity:0.8;fill:#e0e0e0;stroke:#000000;stroke-width:1" />
+      <rect
+         class="rect"
+         id="2_6"
+         width="1"
+         height="50"
+         x="766.7359"
+         y="379"
+         style="opacity:0.8;fill:#a0a0a0;stroke:#000000;stroke-width:1" />
+      <rect
+         class="rect"
+         id="2_7"
+         width="1"
+         height="50"
+         x="774.7359"
+         y="387"
+         style="opacity:0.8;fill:#e0e0e0;stroke:#000000;stroke-width:1" />
+      <rect
+         class="rect"
+         id="2_8"
+         width="1"
+         height="50"
+         x="782.7359"
+         y="395"
+         style="opacity:0.8;fill:#a0a0a0;stroke:#000000;stroke-width:1" />
+      <rect
+         class="rect"
+         id="2_9"
+         width="1"
+         height="50"
+         x="790.7359"
+         y="403"
+         style="opacity:0.8;fill:#e0e0e0;stroke:#000000;stroke-width:1" />
+      <rect
+         class="rect"
+         id="2_10"
+         width="1"
+         height="50"
+         x="798.7359"
+         y="411"
+         style="opacity:0.8;fill:#a0a0a0;stroke:#000000;stroke-width:1" />
+      <rect
+         class="rect"
+         id="2_11"
+         width="1"
+         height="50"
+         x="806.7359"
+         y="419"
+         style="opacity:0.8;fill:#e0e0e0;stroke:#000000;stroke-width:1" />
+      <rect
+         class="rect"
+         id="2_12"
+         width="1"
+         height="50"
+         x="814.7359"
+         y="427"
+         style="opacity:0.8;fill:#a0a0a0;stroke:#000000;stroke-width:1" />
+      <rect
+         class="rect"
+         id="2_13"
+         width="1"
+         height="50"
+         x="822.7359"
+         y="435"
+         style="opacity:0.8;fill:#e0e0e0;stroke:#000000;stroke-width:1" />
+      <rect
+         class="rect"
+         id="2_14"
+         width="1"
+         height="50"
+         x="830.7359"
+         y="443"
+         style="opacity:0.8;fill:#a0a0a0;stroke:#000000;stroke-width:1" />
+      <rect
+         class="rect"
+         id="2_15"
+         width="1"
+         height="50"
+         x="838.7359"
+         y="451"
+         style="opacity:0.8;fill:#e0e0e0;stroke:#000000;stroke-width:1" />
+      <rect
+         class="rect"
+         id="2_16"
+         width="1"
+         height="50"
+         x="846.7359"
+         y="459"
+         style="opacity:0.8;fill:#a0a0a0;stroke:#000000;stroke-width:1" />
+      <rect
+         class="rect"
+         id="2_17"
+         width="1"
+         height="50"
+         x="854.7359"
+         y="467"
+         style="opacity:0.8;fill:#e0e0e0;stroke:#000000;stroke-width:1" />
+      <rect
+         class="rect"
+         id="2_18"
+         width="1"
+         height="50"
+         x="862.7359"
+         y="475"
+         style="opacity:0.8;fill:#a0a0a0;stroke:#000000;stroke-width:1" />
+      <rect
+         class="rect"
+         id="2_19"
+         width="1"
+         height="50"
+         x="870.7359"
+         y="483"
+         style="opacity:0.8;fill:#e0e0e0;stroke:#000000;stroke-width:1" />
+      <rect
+         class="rect"
+         id="2_20"
+         width="1"
+         height="50"
+         x="878.7359"
+         y="491"
+         style="opacity:0.8;fill:#a0a0a0;stroke:#000000;stroke-width:1" />
+      <rect
+         class="rect"
+         id="2_21"
+         width="1"
+         height="50"
+         x="886.7359"
+         y="499"
+         style="opacity:0.8;fill:#e0e0e0;stroke:#000000;stroke-width:1" />
+      <rect
+         class="rect"
+         id="2_22"
+         width="1"
+         height="50"
+         x="894.7359"
+         y="507"
+         style="opacity:0.8;fill:#a0a0a0;stroke:#000000;stroke-width:1" />
+      <rect
+         class="rect"
+         id="2_23"
+         width="1"
+         height="50"
+         x="902.7359"
+         y="515"
+         style="opacity:0.8;fill:#e0e0e0;stroke:#000000;stroke-width:1" />
+      <rect
+         class="rect"
+         id="2_24"
+         width="1"
+         height="50"
+         x="910.7359"
+         y="523"
+         style="opacity:0.8;fill:#a0a0a0;stroke:#000000;stroke-width:1" />
+      <rect
+         class="rect"
+         id="2_25"
+         width="1"
+         height="50"
+         x="918.7359"
+         y="531"
+         style="opacity:0.8;fill:#e0e0e0;stroke:#000000;stroke-width:1" />
+      <rect
+         class="rect"
+         id="2_26"
+         width="1"
+         height="50"
+         x="926.7359"
+         y="539"
+         style="opacity:0.8;fill:#a0a0a0;stroke:#000000;stroke-width:1" />
+      <rect
+         class="rect"
+         id="2_27"
+         width="1"
+         height="50"
+         x="934.7359"
+         y="547"
+         style="opacity:0.8;fill:#e0e0e0;stroke:#000000;stroke-width:1" />
+      <rect
+         class="rect"
+         id="2_28"
+         width="1"
+         height="50"
+         x="942.7359"
+         y="555"
+         style="opacity:0.8;fill:#a0a0a0;stroke:#000000;stroke-width:1" />
+      <rect
+         class="rect"
+         id="2_29"
+         width="1"
+         height="50"
+         x="950.7359"
+         y="563"
+         style="opacity:0.8;fill:#e0e0e0;stroke:#000000;stroke-width:1" />
+      <rect
+         class="rect"
+         id="2_30"
+         width="1"
+         height="50"
+         x="958.7359"
+         y="571"
+         style="opacity:0.8;fill:#a0a0a0;stroke:#000000;stroke-width:1" />
+      <rect
+         class="rect"
+         id="2_31"
+         width="1"
+         height="50"
+         x="966.7359"
+         y="579"
+         style="opacity:0.8;fill:#e0e0e0;stroke:#000000;stroke-width:1" />
+      <rect
+         class="conv"
+         id="conv_0"
+         width="1"
+         height="1"
+         x="535.7359"
+         y="517.6897"
+         style="fill-opacity:0;stroke:#000000;stroke-width:1;stroke-opacity:0.8" />
+      <rect
+         class="conv"
+         id="conv_1"
+         width="1"
+         height="1"
+         x="743.7359"
+         y="535.40869"
+         style="fill-opacity:0;stroke:#000000;stroke-width:1;stroke-opacity:0.8" />
+      <line
+         class="link"
+         id="line89796"
+         x1="536.7359"
+         y1="518.6897"
+         x2="744.2937"
+         y2="578.32294"
+         style="stroke:#000000;stroke-width:0.5;stroke-opacity:0.8" />
+      <line
+         class="link"
+         id="line89798"
+         x1="536.7359"
+         y1="517.6897"
+         x2="744.2937"
+         y2="578.32294"
+         style="stroke:#000000;stroke-width:0.5;stroke-opacity:0.8" />
+      <line
+         class="link"
+         id="line89800"
+         x1="744.7359"
+         y1="536.40869"
+         x2="967.32233"
+         y2="589.30743"
+         style="stroke:#000000;stroke-width:0.5;stroke-opacity:0.8" />
+      <line
+         class="link"
+         id="line89802"
+         x1="744.7359"
+         y1="535.40869"
+         x2="967.32233"
+         y2="589.30743"
+         style="stroke:#000000;stroke-width:0.5;stroke-opacity:0.8" />
+      <polygon
+         class="poly"
+         id="fc_0"
+         points="1150.5786,596.92136 867.73593,314.07864 877.73593,314.07864 1160.5786,596.92136 "
+         style="opacity:0.8;fill:#e0e0e0;stroke:#000000;stroke-width:1" />
+      <polygon
+         class="poly"
+         id="fc_1"
+         points="1304,526.21068 1162.5786,384.78932 1172.5786,384.78932 1314,526.21068 "
+         style="opacity:0.8;fill:#e0e0e0;stroke:#000000;stroke-width:1" />
+      <polygon
+         class="poly"
+         id="fc_2"
+         points="1386.7107,490.85534 1316,420.14466 1326,420.14466 1396.7107,490.85534 "
+         style="opacity:0.8;fill:#e0e0e0;stroke:#000000;stroke-width:1" />
+      <polygon
+         class="poly"
+         id="fc_3"
+         points="1400.1249,456.20711 1398.7107,454.79289 1408.7107,454.79289 1410.1249,456.20711 "
+         style="opacity:0.8;fill:#e0e0e0;stroke:#000000;stroke-width:1" />
+      <line
+         class="line"
+         id="line89808"
+         x1="967.7359"
+         y1="580"
+         x2="1150.5786"
+         y2="596.92139"
+         style="opacity:1;stroke:#000000;stroke-width:0.5;stroke-opacity:0.8" />
+      <line
+         class="line"
+         id="line89810"
+         x1="719.7359"
+         y1="331"
+         x2="867.7359"
+         y2="314.07864"
+         style="opacity:1;stroke:#000000;stroke-width:0.5;stroke-opacity:0.8" />
+      <line
+         class="line"
+         id="line89812"
+         x1="1160.5786"
+         y1="596.92139"
+         x2="1304"
+         y2="526.21069"
+         style="opacity:1;stroke:#000000;stroke-width:0.5;stroke-opacity:0.8" />
+      <line
+         class="line"
+         id="line89814"
+         x1="877.7359"
+         y1="314.07864"
+         x2="1162.5786"
+         y2="384.78931"
+         style="opacity:1;stroke:#000000;stroke-width:0.5;stroke-opacity:0.8" />
+      <line
+         class="line"
+         id="line89816"
+         x1="1314"
+         y1="526.21069"
+         x2="1386.7107"
+         y2="490.85535"
+         style="opacity:1;stroke:#000000;stroke-width:0.5;stroke-opacity:0.8" />
+      <line
+         class="line"
+         id="line89818"
+         x1="1172.5786"
+         y1="384.78931"
+         x2="1316"
+         y2="420.14465"
+         style="opacity:1;stroke:#000000;stroke-width:0.5;stroke-opacity:0.8" />
+      <line
+         class="line"
+         id="line89820"
+         x1="1396.7107"
+         y1="490.85535"
+         x2="1400.1249"
+         y2="456.20709"
+         style="opacity:1;stroke:#000000;stroke-width:0.5;stroke-opacity:0.8" />
+      <line
+         class="line"
+         id="line89822"
+         x1="1326"
+         y1="420.14465"
+         x2="1398.7107"
+         y2="454.79291"
+         style="opacity:1;stroke:#000000;stroke-width:0.5;stroke-opacity:0.8" />
+      <text
+         class="text"
+         dy="0.34999999em"
+         font-family="sans-serif"
+         x="595.4859"
+         y="737.84271"
+         style="font-size:16px;opacity:1"
+         id="text89824">Convolution</text>
+      <text
+         class="text"
+         dy="0.34999999em"
+         font-family="sans-serif"
+         x="778.9859"
+         y="737.84271"
+         style="font-size:16px;opacity:1"
+         id="text89826">Convolution</text>
+      <text
+         class="text"
+         dy="0.34999999em"
+         font-family="sans-serif"
+         x="973.44659"
+         y="737.84271"
+         style="font-size:16px;opacity:1"
+         id="text89828">Max-Pool</text>
+      <text
+         class="info"
+         dy="-0.30000001em"
+         font-family="sans-serif"
+         x="535.7359"
+         y="440"
+         style="font-size:16px"
+         id="text89830">1@Nx1</text>
+      <text
+         class="info"
+         dy="-0.30000001em"
+         font-family="sans-serif"
+         x="623.7359"
+         y="380"
+         style="font-size:16px"
+         id="text89832">16@Nx1</text>
+      <text
+         class="info"
+         dy="-0.30000001em"
+         font-family="sans-serif"
+         x="718.7359"
+         y="316"
+         style="font-size:16px"
+         id="text89834">32@N/2x1</text>
+      <text
+         class="info"
+         dy="-0.30000001em"
+         font-family="sans-serif"
+         x="867.7359"
+         y="299.07864"
+         style="font-size:16px"
+         id="text89836">1x32*N/2</text>
+      <text
+         class="info"
+         dy="-0.30000001em"
+         font-family="sans-serif"
+         x="1162.5786"
+         y="369.78931"
+         style="font-size:16px"
+         id="text89838">1x200</text>
+      <text
+         class="info"
+         dy="-0.30000001em"
+         font-family="sans-serif"
+         x="1316"
+         y="405.14465"
+         style="font-size:16px"
+         id="text89840">1x100</text>
+      <text
+         class="info"
+         dy="-0.30000001em"
+         font-family="sans-serif"
+         x="1398.7107"
+         y="439.79291"
+         style="font-size:16px"
+         id="text89842">1x2</text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none"
+       x="1514.3448"
+       y="593.73816"
+       id="text120108"
+       inkscape:export-filename="/home/artemio/Documents/repos/MachineLearningAndCOVID/src/NNClassifiers/cnn.jpg"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         sodipodi:role="line"
+         id="tspan120106"
+         x="1514.3448"
+         y="593.73816">FC</tspan></text>
+  </g>
 </svg>

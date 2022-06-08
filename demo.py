@@ -79,8 +79,7 @@ elif analysis == "Cases and deaths chart":
 elif analysis == "Convolutional Neural Networks":
     with st.expander("About this model"):
         st.markdown("EXPLANATION FOR CLASSIFIER")
-        st.code("""for i in range(5):
-            algorithm""")
+        st.image("https://raw.githubusercontent.com/ArtemioPadilla/MachineLearningAndCOVID/main/src/NNClassifiers/cnn.svg", width=300)    
 
     st.markdown("__Please enter patient information__")
     
