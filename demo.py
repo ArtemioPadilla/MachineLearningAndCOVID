@@ -19,6 +19,7 @@ aux =  cases_who[cases_who.New_cases !=0]. groupby('Country').sum()
 
 # import lstm
 device = "cpu"#torch.device("cuda" if torch.cuda.is_available() else "cpu")
+st.cache
 classifier_symptoms = torch.load('./torch_models/model_diagnosis.pth', map_location=torch.device(device))
 classifier_hosp = torch.load('./torch_models/model_hosp.pth', map_location=torch.device(device))
 classifier_death = torch.load('./torch_models/model_death.pth', map_location=torch.device(device))
@@ -56,6 +57,7 @@ if analysis == "LSTM forecast":
     #trainX,trainY= data_train(country, window, window_to_predict,type_ts_ )
 
     #Entrenamos
+    st.cache
     #lstm_save = torch.load('./torch_models/LSTM_models_'+type_ts_+'/'+country+'_New_cases.pth', map_location=torch.device("cpu"))
     #model = LSTM(seq_length=4,input_size = 1,hidden_size = 4,num_layers = 1,num_classes = 1)
     #model.load_state_dict(lstm_save)
