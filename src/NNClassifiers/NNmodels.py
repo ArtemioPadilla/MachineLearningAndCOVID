@@ -41,7 +41,6 @@ class NNclassifier(nn.Module):
 
     # aplanar (flatenning)
     out = out.view(out.size(0), -1) # [batchsize, 32*N//2]
-    print("out.size(): ", out.size())
     out = self.fc1(out)
     # Non-linearity 1
     out = self.sigmoid(out)
