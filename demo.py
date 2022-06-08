@@ -30,7 +30,7 @@ st.title("Some applications of deep learning for the COVID-19 pandemic")
 st.markdown("In this application you can either get forecast for the COVID-19 pandemic infected number using **LSTMs** or you can use a **neural network classifier** to get probabilities of desease and hospitalization for an individual with certain characteristics")
 st.markdown("_more info to be written here_")
 
-analysis = st.radio("Please enter which type of application you want to explore:", ["None","Cases and deaths chart", "LSTM forecast", "Neural Network Classifier"])
+analysis = st.radio("Please enter which type of application you want to explore:", ["None","Cases and deaths chart", "LSTM forecast", "Convolutional Neural Networks"])
 
 if analysis == "LSTM forecast":
     with st.expander("See explanation"):
@@ -73,8 +73,8 @@ elif analysis == "Cases and deaths chart":
         fig = px.line(cases_who, x="Date_reported", y="New_deaths", color="Country")
     st.plotly_chart(fig)
 
-elif analysis == "Neural Network Classifier":
-    with st.expander("See explanation"):
+elif analysis == "Convolutional Neural Networks":
+    with st.expander("About this model"):
         st.markdown("EXPLANATION FOR CLASSIFIER")
         st.code("""for i in range(5):
             algorithm""")
@@ -149,9 +149,12 @@ elif analysis == "Neural Network Classifier":
         probs = prob_model(classifier_symptoms, X_symptoms, device) 
 
         if res == 1:
-            st.error(f"El clasificador indica que eres POSITIVO a COVID-19 con probabilidad de {probs[1]:.2f}%")
+            st.error(f"El clasificador indica que eres POSITIVO a COVID-19 una seguridad de {probs[1]*100:.2f}%")
         elif res == 0:
-            st.success(f"El clasificador indica que eres NEGATIVO a COVID-19 con probabilidad de {probs[0]:.2f}%")
+            if probs[0] > 0.6:
+                st.success(f"El clasificador indica que eres NEGATIVO a COVID-19 una seguridad de {probs[0]*100:.2f}%")
+            else:
+                st.warning(f"El clasificador indica que eres NEGATIVO a COVID-19 una seguridad de {probs[0]*100:.2f}%")
 
 
 
@@ -168,9 +171,12 @@ elif analysis == "Neural Network Classifier":
 
         st.markdown("If you where to have covid the chances of you being hospitalized having your commobidities and symtoms are:")
         if res == 1:
-            st.error(f"Estimamos que si te da COVID-19 van a tener que HOSPITALIZARTE con probabilidad de {probs[1]:.2f}%")
+            st.error(f"Estimamos que si te da COVID-19 van a tener que HOSPITALIZARTE con una seguridad de {probs[1]*100:.2f}%")
         elif res == 0:
-            st.success(f"Estimamos que si te da COVID-19 NO HABRA HOSPITALIZACIÓN con probabilidad de {probs[0]:.2f}%")
+            if probs[0] > 0.6:
+                st.success(f"Estimamos que si te da COVID-19 NO van a tener que HOSPITALIZARTE con una seguridad de {probs[0]*100:.2f}%")
+            else:
+                st.warning(f"Estimamos que si te da COVID-19 NO van a tener que HOSPITALIZARTE con una seguridad de {probs[0]*100:.2f}%")
 
 
         st.markdown("""## Risk of Death""")
@@ -183,9 +189,12 @@ elif analysis == "Neural Network Classifier":
 
         st.markdown("If you where to have covid given your symptoms and your commorbidities the chances of you dying are:")
         if res == 1:
-            st.error(f"Podrías MORIR a COVID-19 con probabilidad de {probs[1]:.2f}%")
+            st.error(f"La red neuronal piensa que vas a MORIR con una seguridad de {probs[1]*100:.2f}%")
         elif res == 0:
-            st.success(f"Lo más probable es que SOBREVIVAS con probabilidad de {probs[0]:.2f}%")
+            if probs[0] > 0.6:
+                st.success(f"La red neuronal piensa que vas a SOBREVIVIR con una seguridad de {probs[0]*100:.2f}%")
+            else:
+                st.warning(f"La red neuronal piensa que vas a SOBREVIVIR con una seguridad de {probs[0]*100:.2f}%")
         # classfier.run(data)
         
 
