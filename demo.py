@@ -3,6 +3,7 @@ import streamlit as st
 import pandas as pd
 from time import sleep
 import torch
+import plotly.express as px
 from src.helpers import predict_model, prob_model
 from src.NNClassifiers.NNmodels import NNclassifier
 
@@ -24,7 +25,7 @@ st.title("Some applications of deep learning for the COVID-19 pandemic")
 st.markdown("In this application you can either get forecast for the COVID-19 pandemic infected number using **LSTMs** or you can use a **neural network classifier** to get probabilities of desease and hospitalization for an individual with certain characteristics")
 st.markdown("_more info to be written here_")
 
-analysis = st.radio("Please enter which type of application you want to explore:", ["None","LSTM forecast", "Neural Network Classifier"])
+analysis = st.radio("Please enter which type of application you want to explore:", ["None","Cases and deaths chart", "LSTM forecast", "Neural Network Classifier"])
 
 if analysis == "LSTM forecast":
     with st.expander("See explanation"):
@@ -46,6 +47,19 @@ if analysis == "LSTM forecast":
     df = pd.read_csv(url)
     #st.dataframe(df.iloc[:,3:])
     st.line_chart(df.iloc[:,3:])
+    
+elif analysis == "Cases and deaths chart":
+    with st.expander("See explanation"):
+        st.markdown("EXPLANATION FOR LSTMs")
+        st.code("""for i in range(5):
+            algorithm""")
+    type = st.selectbox("Pick type", ["Cases", "Deaths"])
+    if type == "Cases":
+        fig = px.scatter(cases_who, x="Date_reported", y="New_cases", color="Country")
+    else:
+        fig = px.scatter(cases_who, x="Date_reported", y="New_deaths", color="Country")
+    st.plotly_chart(fig, use_container_width=True)
+
 elif analysis == "Neural Network Classifier":
     with st.expander("See explanation"):
         st.markdown("EXPLANATION FOR CLASSIFIER")
