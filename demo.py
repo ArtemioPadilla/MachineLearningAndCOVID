@@ -45,8 +45,9 @@ if analysis == "LSTM forecast":
             algorithm""")
 
     type_ts = st.radio("Count Type", ["New cases","New deaths"])
-    aux =  cases_who[cases_who[type_ts] !=0]. groupby('Country').sum()
-    countries = list(aux[aux[type_ts]>10000].index)
+    type_ts_ = type_ts.replace(" ", "_")
+    aux =  cases_who[cases_who[type_ts_] !=0]. groupby('Country').sum()
+    countries = list(aux[aux[type_ts_]>10000].index)
     country = st.selectbox("Pick a country to analyse", countries)
     window_to_predict = st.slider(label= "Select the window of time in days to predict", min_value=1, max_value=30, value=None, step=None)
     st.write(f"The country you choose is {country}")
