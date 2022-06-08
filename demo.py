@@ -1,6 +1,7 @@
 import numpy as np
 import streamlit as st
 import pandas as pd
+import pickle
 from time import sleep
 import torch
 import plotly.express as px
@@ -10,16 +11,14 @@ from torch.autograd import Variable
 from sklearn.preprocessing import MinMaxScaler
 from src.helpers import predict_model, prob_model
 from src.NNClassifiers.NNmodels import NNclassifier
-from src.Forecast.LSTM_ARIMA import predict_future_jojojo,plot_ts, LSTM
+#from src.Forecast.LSTM_ARIMA import predict_future_jojojo,plot_ts, LSTM
 
 #Data cases
 cases_who = pd.read_csv('https://raw.githubusercontent.com/ArtemioPadilla/MachineLearningAndCOVID/main/Datasets/SDG-3-Health/WHO-COVID-19-global-data-up.csv')
-aux =  cases_who[cases_who.New_cases !=0]. groupby('Country').sum()
-
 
 # import lstm
 device = "cpu"#torch.device("cuda" if torch.cuda.is_available() else "cpu")
-st.cache
+@st.cache
 classifier_symptoms = torch.load('./torch_models/model_diagnosis.pth', map_location=torch.device(device))
 classifier_hosp = torch.load('./torch_models/model_hosp.pth', map_location=torch.device(device))
 classifier_death = torch.load('./torch_models/model_death.pth', map_location=torch.device(device))
@@ -40,6 +39,7 @@ if analysis == "LSTM forecast":
             algorithm""")
 
     type_ts = st.radio("Count Type", ["New cases","New deaths"])
+    aux =  cases_who[cases_who[type_ts] !=0]. groupby('Country').sum()
     countries = list(aux[aux[type_ts]>10000].index)
     country = st.selectbox("Pick a country to analyse", countries)
     window_to_predict = st.slider(label= "Select the window of time in days to predict", min_value=1, max_value=30, value=None, step=None)
@@ -57,7 +57,7 @@ if analysis == "LSTM forecast":
     #trainX,trainY= data_train(country, window, window_to_predict,type_ts_ )
 
     #Entrenamos
-    st.cache
+    @st.cache
     #lstm_save = torch.load('./torch_models/LSTM_models_'+type_ts_+'/'+country+'_New_cases.pth', map_location=torch.device("cpu"))
     #model = LSTM(seq_length=4,input_size = 1,hidden_size = 4,num_layers = 1,num_classes = 1)
     #model.load_state_dict(lstm_save)
