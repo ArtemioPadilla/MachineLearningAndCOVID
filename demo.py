@@ -65,6 +65,7 @@ if analysis == "LSTM forecast":
 
     #Entrenamos
     #lstm_save = load_model('./torch_models/LSTM_models_'+str(type_ts_)+'/'+country+'_New_cases.pth')
+    st.markdown('./torch_models/LSTM_models_'+str(type_ts_)+'/'+country+'_New_cases.pth')
     lstm_save = torch.load('./torch_models/LSTM_models_'+str(type_ts_)+'/'+country+'_New_cases.pth', map_location=torch.device("cpu"))
     model = LSTM(seq_length=4,input_size = 1,hidden_size = 4,num_layers = 1,num_classes = 1)
     model.load_state_dict(lstm_save)
