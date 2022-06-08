@@ -150,12 +150,12 @@ elif analysis == "Convolutional Neural Networks":
         probs = prob_model(classifier_symptoms, X_symptoms, device) 
 
         if res == 1:
-            st.error(f"El clasificador indica que eres POSITIVO a COVID-19 con una seguridad de {probs[1]*100:.2f}%")
-        elif res == 0:
-            if probs[0] > 0.5:
-                st.success(f"El clasificador indica que eres NEGATIVO a COVID-19 con una seguridad de {probs[0]*100:.2f}%")
+            if probs[1] > 0.75:
+                st.error(f"El clasificador indica que eres POSITIVO a COVID-19 con una seguridad de {probs[1]*100:.2f}%")
             else:
-                st.warning(f"El clasificador indica que eres NEGATIVO a COVID-19 con una seguridad de {probs[0]*100:.2f}%")
+                st.warning(f"El clasificador indica que eres POSITIVO a COVID-19 con una seguridad de {probs[1]*100:.2f}%")
+        elif res == 0:
+            st.success(f"El clasificador indica que eres NEGATIVO a COVID-19 con una seguridad de {probs[0]*100:.2f}%")
 
 
 
@@ -172,12 +172,12 @@ elif analysis == "Convolutional Neural Networks":
 
         st.markdown("If you where to have covid the chances of you being hospitalized having your commobidities and symtoms are:")
         if res == 1:
-            st.error(f"Estimamos que si te da COVID-19 van a tener que HOSPITALIZARTE con una seguridad de {probs[1]*100:.2f}%")
-        elif res == 0:
-            if probs[0] > 0.6:
-                st.success(f"Estimamos que si te da COVID-19 NO van a tener que HOSPITALIZARTE con una seguridad de {probs[0]*100:.2f}%")
+            if probs[0] > 0.75:
+                st.error(f"Estimamos que si te da COVID-19 van a tener que HOSPITALIZARTE con una seguridad de {probs[1]*100:.2f}%")
             else:
-                st.warning(f"Estimamos que si te da COVID-19 NO van a tener que HOSPITALIZARTE con una seguridad de {probs[0]*100:.2f}%")
+                st.warning(f"Estimamos que si te da COVID-19 van a tener que HOSPITALIZARTE con una seguridad de {probs[1]*100:.2f}%")
+        elif res == 0:
+            st.success(f"Estimamos que si te da COVID-19 NO van a tener que HOSPITALIZARTE con una seguridad de {probs[0]*100:.2f}%")
 
 
         st.markdown("""## Risk of Death""")
