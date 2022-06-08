@@ -81,7 +81,7 @@ def plot_ts(model,arima_path,time, window, country,type_ts ):
   model.eval()
   
   #pred_future = predict_future_jojojo(data_predict[-window:].reshape(1,window)[0].tolist(),time, window)  
-  pred_future = predict_future_jojojo(training_data[-window:].reshape(1,window)[0].tolist(),time, window)  
+  pred_future = predict_future_jojojo(model,training_data[-window:].reshape(1,window)[0].tolist(),time, window)  
 
   date_pred = pd.date_range(training_set.Date_reported[-2:].values[0], periods=time)
   
