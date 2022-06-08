@@ -25,6 +25,8 @@ def load_model(path):
 classifier_symptoms = load_model('./torch_models/model_diagnosis.pth')
 classifier_hosp = load_model('./torch_models/model_hosp.pth')
 classifier_death = load_model('./torch_models/model_death.pth')
+
+afganistan = load_model('./torch_models/LSTMS_models_New_cases/Afghanistan_New_deaths.pth')
 #classifier_symptoms = torch.load('./torch_models/model_diagnosis.pth', map_location=torch.device(device))
 #classifier_hosp = torch.load('./torch_models/model_hosp.pth', map_location=torch.device(device))
 #classifier_death = torch.load('./torch_models/model_death.pth', map_location=torch.device(device))
