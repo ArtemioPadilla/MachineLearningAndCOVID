@@ -26,7 +26,7 @@ st.title("Some applications of deep learning for the COVID-19 pandemic")
 st.markdown("In this application you can either get forecast for the COVID-19 pandemic infected number using **LSTMs** or you can use a **neural network classifier** to get probabilities of desease and hospitalization for an individual with certain characteristics")
 st.markdown("_more info to be written here_")
 
-analysis = st.radio("Please enter which type of application you want to explore:", ["None","Cases and deaths chart", "LSTM forecast", "Neural Network Classifier"])
+analysis = st.radio("Please enter which type of application you want to explore:", ["None","Cases and deaths chart", "LSTM forecast", "Convolutional Neural Networks"])
 
 if analysis == "LSTM forecast":
     with st.expander("See explanation"):
@@ -61,8 +61,8 @@ elif analysis == "Cases and deaths chart":
         fig = px.line(cases_who, x="Date_reported", y="New_deaths", color="Country")
     st.plotly_chart(fig)
 
-elif analysis == "Neural Network Classifier":
-    with st.expander("See explanation"):
+elif analysis == "Convolutional Neural Networks":
+    with st.expander("About this model"):
         st.markdown("EXPLANATION FOR CLASSIFIER")
         st.code("""for i in range(5):
             algorithm""")
