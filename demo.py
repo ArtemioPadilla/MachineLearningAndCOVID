@@ -10,12 +10,12 @@ from torch.autograd import Variable
 from sklearn.preprocessing import MinMaxScaler
 from src.helpers import predict_model, prob_model
 from src.NNClassifiers.NNmodels import NNclassifier
-from src.Forecast.LSTM_ARIMA import sliding_windows,LSTM,train_lstm,predict_future_jojojo,plot_ts,data_train
+from src.Forecast.LSTM_ARIMA import predict_future_jojojo,plot_ts, LSTM
 
 #Data cases
 cases_who = pd.read_csv('https://raw.githubusercontent.com/ArtemioPadilla/MachineLearningAndCOVID/main/Datasets/SDG-3-Health/WHO-COVID-19-global-data-up.csv')
 aux =  cases_who[cases_who.New_cases !=0]. groupby('Country').sum()
-contries = list(aux[aux.New_cases>10000].index)
+
 
 # import lstm
 device = "cpu"#torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -38,11 +38,12 @@ if analysis == "LSTM forecast":
         st.code("""for i in range(5):
             algorithm""")
 
-    country_list = ["Mexico", "USA", "Israel"]
-    country = st.selectbox("Pick a country to analyse", contries)
+    type_ts = st.radio("Count Type", ["New cases","New deaths"])
+    countries = list(aux[aux[type_ts]>10000].index)
+    country = st.selectbox("Pick a country to analyse", countries)
     window_to_predict = st.slider(label= "Select the window of time in days to predict", min_value=1, max_value=30, value=None, step=None)
     st.write(f"The country you choose is {country}")
-    type_ts = st.radio("Count Type", ["New cases","New deaths"])
+    
     #st.metric(label = "Test", value=1, delta=-0.1, delta_color="normal")
     # Example plot
     # Get LSTM prediction for country
@@ -52,11 +53,13 @@ if analysis == "LSTM forecast":
     window = 4
     sc = MinMaxScaler()
     type_ts_ = type_ts.replace(" ", "_")
-    trainX,trainY= data_train(country, window, window_to_predict,type_ts_ )
+    #trainX,trainY= data_train(country, window, window_to_predict,type_ts_ )
 
     #Entrenamos
-    lstm = train_lstm(trainX,trainY)
-    fig = plot_ts(window_to_predict, window, country , type_ts_)
+    lstm_save = torch.load('./torch_models/LSTM_models_'+type_ts_+'/'+country+'_New_cases.pth', map_location=torch.device("cpu"))
+    model = LSTM(seq_length=4,input_size = 1,hidden_size = 4,num_layers = 1,num_classes = 1)
+    model.load_state_dict(lstm_save)
+    fig = plot_ts(model, window_to_predict, window, country , type_ts_)
     st.plotly_chart(fig)
     #url = "https://raw.githubusercontent.com/ArtemioPadilla/ML-Datasets/main/Casos_Diarios_Estado_Nacional_Defunciones_20210121.csv"
     #df = pd.read_csv(url)
