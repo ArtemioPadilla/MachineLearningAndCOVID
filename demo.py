@@ -36,9 +36,9 @@ st.title("Some applications of deep learning for the COVID-19 pandemic")
 st.markdown("In this application you can either get forecast for the COVID-19 pandemic infected number using **LSTMs** or you can use a **neural network classifier** to get probabilities of desease and hospitalization for an individual with certain characteristics")
 st.markdown("_more info to be written here_")
 
-analysis = st.radio("Please enter which type of application you want to explore:", ["None","Cases and deaths chart", "LSTM forecast", "Convolutional Neural Networks"])
+analysis = st.radio("Please enter which type of application you want to explore:", ["None","Cases and deaths chart", "LSTM-ARIMA forecast", "Convolutional Neural Networks"])
 
-if analysis == "LSTM forecast":
+if analysis == "LSTM-ARIMA forecast":
     with st.expander("See explanation"):
         st.markdown("EXPLANATION FOR LSTMs")
         st.code("""for i in range(5):
@@ -64,12 +64,19 @@ if analysis == "LSTM forecast":
     #trainX,trainY= data_train(country, window, window_to_predict,type_ts_ )
 
     #Entrenamos
+    #lstm = load_model('./torch_models/LSTMS_models_New_cases/Afghanistan_New_cases.pth')
     #lstm_save = load_model('./torch_models/LSTM_models_'+str(type_ts_)+'/'+country+'_New_cases.pth')
-    st.markdown('./torch_models/LSTM_models_'+str(type_ts_)+'/'+country+'_New_cases.pth')
-    lstm_save = torch.load('./torch_models/LSTM_models_'+str(type_ts_)+'/'+country+'_New_cases.pth', map_location=torch.device("cpu"))
+    if type_ts_=="New_cases":
+        last_pth = '_New_deaths.pth'
+    else:
+         last_pth = 'New_cases.pth'
+
+    st.markdown('./torch_models/LSTMS_models_'+str(type_ts_)+'/'+country+last_pth)
+    lstm_save = load_model('./torch_models/LSTMS_models_'+str(type_ts_)+'/'+country+last_pth)
+    #lstm_save = torch.load('./torch_models/LSTM_models_'+str(type_ts_)+'/'+country+last_pth, map_location=torch.device("cpu"))
     model = LSTM(seq_length=4,input_size = 1,hidden_size = 4,num_layers = 1,num_classes = 1)
     model.load_state_dict(lstm_save)
-    arima_path = './torch_models/ARIMA_models_'+type_ts_+'/'+country+'New_cases.pkl'
+    arima_path = './torch_models/ARIMA_models_'+type_ts_+'/'+country+str(type_ts_)+'.pkl'
     fig = plot_ts(model,arima_path, window_to_predict, window, country , type_ts_)
     st.plotly_chart(fig)
     #url = "https://raw.githubusercontent.com/ArtemioPadilla/ML-Datasets/main/Casos_Diarios_Estado_Nacional_Defunciones_20210121.csv"
@@ -80,6 +87,8 @@ if analysis == "LSTM forecast":
 elif analysis == "Cases and deaths chart":
     with st.expander("See explanation"):
         st.markdown("EXPLANATION FOR LSTMs")
+        st.markdown("LSTM cells are used in recurrent neural networks that learn to predict the future from sequences of variable lengths. That RNN work with any kind of sequential data and, unlike ARIMA are not restricted to time series. ")
+        
         st.code("""for i in range(5):
             algorithm""")
     type = st.selectbox("Pick type", ["Cases", "Deaths"])
