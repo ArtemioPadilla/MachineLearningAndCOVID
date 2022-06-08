@@ -115,9 +115,7 @@ elif analysis == "Convolutional Neural Networks":
     conjun = bool_mask[col2.radio("Conjuntivitis", ["no","sí"])]
     cianosis = bool_mask[col3.radio("Coloración azulada de la piel", ["no","sí"])]
     
-    inisubis = bool_mask[col1.radio("Inicio súbito de síntomas", ["no","sí"])]
-    #digcline = bool_mask[col1.radio("Neumonía", ["no","sí"])]
-  
+    inisubis = bool_mask[col2.radio("Inicio súbito de síntomas", ["no","sí"])]
 
     st.markdown("__Please enter your commorbidities__")
 
@@ -149,12 +147,12 @@ elif analysis == "Convolutional Neural Networks":
         probs = prob_model(classifier_symptoms, X_symptoms, device) 
 
         if res == 1:
-            st.error(f"El clasificador indica que eres POSITIVO a COVID-19 una seguridad de {probs[1]*100:.2f}%")
+            st.error(f"El clasificador indica que eres POSITIVO a COVID-19 con una seguridad de {probs[1]*100:.2f}%")
         elif res == 0:
             if probs[0] > 0.6:
-                st.success(f"El clasificador indica que eres NEGATIVO a COVID-19 una seguridad de {probs[0]*100:.2f}%")
+                st.success(f"El clasificador indica que eres NEGATIVO a COVID-19 con una seguridad de {probs[0]*100:.2f}%")
             else:
-                st.warning(f"El clasificador indica que eres NEGATIVO a COVID-19 una seguridad de {probs[0]*100:.2f}%")
+                st.warning(f"El clasificador indica que eres NEGATIVO a COVID-19 con una seguridad de {probs[0]*100:.2f}%")
 
 
 
