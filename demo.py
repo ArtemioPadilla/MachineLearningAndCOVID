@@ -5,8 +5,12 @@ from time import sleep
 import torch
 import plotly.express as px
 import plotly.graph_objects as go
+import torch.nn as nn
+from torch.autograd import Variable
+from sklearn.preprocessing import MinMaxScaler
 from src.helpers import predict_model, prob_model
 from src.NNClassifiers.NNmodels import NNclassifier
+from src.Forecast.LSTM_ARIMA import sliding_windows,LSTM,train_lstm,predict_future_jojojo,plot_ts,data_train,
 
 #Data cases
 cases_who = pd.read_csv('https://raw.githubusercontent.com/ArtemioPadilla/MachineLearningAndCOVID/main/Datasets/SDG-3-Health/WHO-COVID-19-global-data-up.csv')
@@ -44,6 +48,13 @@ if analysis == "LSTM forecast":
     # data, prediction = lstm(country, window_to_predict)
     # Plot line chart
     # st.line_chart(np.concat([data,prediction]))
+    window = 4
+    sc = MinMaxScaler()
+    trainX,trainY= data_train(country, window, window_to_predict)
+    #Entrenamos
+    lstm = train_lstm(trainX,trainY)
+    fig = plot_ts(window_to_predict, window, country )
+    st.plotly_chart(fig)
     url = "https://raw.githubusercontent.com/ArtemioPadilla/ML-Datasets/main/Casos_Diarios_Estado_Nacional_Defunciones_20210121.csv"
     df = pd.read_csv(url)
     #st.dataframe(df.iloc[:,3:])
@@ -55,6 +66,7 @@ elif analysis == "Cases and deaths chart":
         st.code("""for i in range(5):
             algorithm""")
     type = st.selectbox("Pick type", ["Cases", "Deaths"])
+    st.write(type, 'for all the world countries')
     if type == "Cases":
         fig = px.line(cases_who, x="Date_reported", y="New_cases", color="Country")
     else:
