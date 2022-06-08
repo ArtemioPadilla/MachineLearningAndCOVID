@@ -101,8 +101,45 @@ elif analysis == "Cases and deaths chart":
 
 elif analysis == "Convolutional Neural Networks":
     with st.expander("About this model"):
-        st.markdown("EXPLANATION FOR CLASSIFIER")
-        st.image("https://raw.githubusercontent.com/ArtemioPadilla/MachineLearningAndCOVID/main/src/NNClassifiers/cnn.svg", width=300)    
+        st.markdown("The convolutional neural networks on this project used the following architecture:")
+        st.image("https://raw.githubusercontent.com/ArtemioPadilla/MachineLearningAndCOVID/main/src/NNClassifiers/cnn.svg")    
+        st.markdown("The variables used to try to detect infected are :")
+        st.markdown("The variables used to try to detect risk of hospitalization are :")
+        st.markdown("The variables used to try to detect risk of dead are :")
+        st.markdown(f"The model to try to detect infected had an average accuracy of {67.60}% the following classification report:")
+        st.markdown("""
+              precision    recall  f1-score   support
+
+    NEGATIVE       0.90      0.66      0.76     78398
+       COVID       0.37      0.73      0.49     21602
+
+    accuracy                           0.68    100000
+   macro avg       0.63      0.69      0.63    100000
+weighted avg       0.78      0.68      0.70    100000
+
+        """)
+        st.markdown(f"The model to try to detect hospitalization risk had an average accuracy of {89.91}% the following classification report:")
+        st.markdown("""
+                  precision    recall  f1-score   support
+
+NOT HOSPITALIZED       0.99      0.90      0.94     81856
+    HOSPITALIZED       0.31      0.84      0.46      4367
+
+        accuracy                           0.90     86223
+       macro avg       0.65      0.87      0.70     86223
+    weighted avg       0.96      0.90      0.92     86223
+        """)
+        st.markdown(f"The model to try to detect risk of dying had an average accuracy if {80.56}% and the following classification report:")
+        st.markdown("""
+              precision    recall  f1-score   support
+
+        Life       0.99      0.81      0.89     84295
+        Dead       0.09      0.81      0.16      1928
+
+    accuracy                           0.81     86223
+   macro avg       0.54      0.81      0.52     86223
+weighted avg       0.97      0.81      0.87     86223
+""")
 
     st.markdown("__Please enter patient information__")
     
