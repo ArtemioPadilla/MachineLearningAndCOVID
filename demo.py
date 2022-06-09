@@ -288,7 +288,7 @@ if analysis == "LSTM-ARIMA forecast":
     #df = pd.read_csv(url)
     #st.dataframe(df.iloc[:,3:])
     #st.line_chart(df.iloc[:,3:])
-elif analysis == "About us"
+elif analysis == "About us":
     col1, col2, col3 = st.columns(3)
 
     with col1:
@@ -302,7 +302,7 @@ elif analysis == "About us"
     with col3:
         st.header("An owl")
         st.image("https://static.streamlit.io/examples/owl.jpg")
-        
+
 
 elif analysis == "Cases and deaths chart":
     with st.expander("See explanation"):
