@@ -314,7 +314,7 @@ elif analysis == "About us":
 
     with col21:
         st.header("Ingrid Pamela Ruiz")
-        st.markdown("Data Science student at IIMAS, UNAM Actuarial Science at Science Faculty, UNAM")
+        st.markdown("Data Science student at IIMAS, Actuarial Science at Science Faculty, UNAM")
         st.image("./imgs/pamela_ruiz_02-modified.png")
 
     with col31:
