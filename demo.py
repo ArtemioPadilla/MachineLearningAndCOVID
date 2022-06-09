@@ -319,7 +319,7 @@ elif analysis == "About us":
 
     with col31:
         st.header("Guillermo Cota Martínez")
-        st.markdown( "Undergraduate student of Data Science at the UNAM's (National Autonomous University of Mexico) Applied Mathematics and Systems Research Institute")
+        st.markdown( "Undergraduate student of Data Science at the Applied Mathematics and Systems Research Institute")
         st.image("./imgs/mem_circle.png")
 
 
