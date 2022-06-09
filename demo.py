@@ -13,9 +13,15 @@ from src.helpers import predict_model, prob_model
 from src.NNClassifiers.NNmodels import NNclassifier
 from src.Forecast.LSTM_ARIMA import predict_future_jojojo,plot_ts, LSTM
 
-[theme]
-base="dark"
-primaryColor="purple"
+st.markdown("""
+<style>
+body {
+  background: #ff0099; 
+  background: -webkit-linear-gradient(to right, #ff0099, #493240); 
+  background: linear-gradient(to right, #ff0099, #493240); 
+}
+</style>
+    """, unsafe_allow_html=True)
 
 #Data cases
 cases_who = pd.read_csv('https://raw.githubusercontent.com/ArtemioPadilla/MachineLearningAndCOVID/main/Datasets/SDG-3-Health/WHO-COVID-19-global-data-up.csv')
