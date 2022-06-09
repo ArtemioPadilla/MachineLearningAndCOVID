@@ -287,12 +287,12 @@ if analysis == "LSTM-ARIMA forecast":
     #st.line_chart(df.iloc[:,3:])
 elif analysis == "About us":
     st.subheader('Universidad Nacional Autónoma de México')
-    
+
     col1, col2, col3 = st.columns(3)
 
     with col1:
         st.header("A cat")
-        st.image("https://static.streamlit.io/examples/cat.jpg")
+        st.image("./imgs/pamela_ruiz_02-modified.png")
 
     with col2:
         st.header("A dog")
