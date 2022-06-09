@@ -42,7 +42,7 @@ st.title("Some applications of deep learning for the COVID-19 pandemic")
 st.markdown("In this application you can either get forecast for the COVID-19 pandemic infected number and deaths number using **LSTMs & ARIMA** or you can use a **neural network classifier** to get probabilities of desease and hospitalization for an individual with certain characteristics")
 
 
-analysis = st.radio("Please enter which type of application you want to explore:", ["About us","Cases and deaths chart", "LSTM-ARIMA forecast", "Convolutional Neural Networks"])
+analysis = st.radio("Please enter which type of application you want to explore:", ["None","Cases and deaths chart", "LSTM-ARIMA forecast", "Convolutional Neural Networks"])
 
 if analysis == "LSTM-ARIMA forecast":
     with st.expander("See explanation"):
@@ -285,7 +285,7 @@ if analysis == "LSTM-ARIMA forecast":
     #df = pd.read_csv(url)
     #st.dataframe(df.iloc[:,3:])
     #st.line_chart(df.iloc[:,3:])
-elif analysis == "About us":
+elif analysis == "None":
     pass
 
 
@@ -483,7 +483,7 @@ weighted avg       0.97      0.81      0.87     86223
         #st.snow()
 
 
-with st.expander("See contributors"):
+with st.expander("About us"):
 
     st.header('Universidad Nacional Autónoma de México')
 
