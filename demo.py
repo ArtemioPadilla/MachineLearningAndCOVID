@@ -286,39 +286,39 @@ if analysis == "LSTM-ARIMA forecast":
     #st.dataframe(df.iloc[:,3:])
     #st.line_chart(df.iloc[:,3:])
 elif analysis == "About us":
-    st.subheader('Universidad Nacional Autónoma de México')
+    st.header('Universidad Nacional Autónoma de México')
 
     col1, col2, col3 = st.columns(3)
 
     with col1:
-        st.header("Alfonso Barajas Cervantes")
+        st.subheader("Alfonso Barajas Cervantes")
         st.markdown("Data Science Major at IIMAS, Applied Mathematics and Systems Research Institute, UNAM.")
         st.image("./imgs/Alfonso_circle.png")
 
     with col2:
-            st.header("Artemio Santiago Padilla Robles")
+            st.subheader("Artemio Santiago Padilla Robles")
             st.markdown("Physics bachelor graduate and Data Science bachelors student at UNAM")
             st.image("./imgs/Art_circle.png")
 
     with col3:
-        st.header("Raul Isaid Mosqueda GAarcía")
+        st.subheader("Raul Isaid Mosqueda García")
         st.markdown("Data Science and Actuarial Science undergraduate at IIMAS-UNAM and Science Faculty - UNAM, Mexico.")
         st.image("./imgs/raul_circle.png")
 
     col11, col21, col31 = st.columns(3)
 
     with col11:
-        st.header("Carlos Cerritos Lira")
+        st.subheader("Carlos Cerritos Lira")
         st.markdown("Data science undergraduate student at IIMAS, UNAM, Mexico.")
         st.image("./imgs/carlos_circle.png")
 
     with col21:
-        st.header("Ingrid Pamela Ruiz")
-        st.markdown("Data Science student at IIMAS, Actuarial Science at Science Faculty, UNAM")
+        st.subheader("Ingrid Pamela Ruiz")
+        st.markdown("Actuarial Science graduate, Data Science student at IIMAS UNAM")
         st.image("./imgs/pamela_ruiz_02-modified.png")
 
     with col31:
-        st.header("Guillermo Cota Martínez")
+        st.subheader("Guillermo Cota Martínez")
         st.markdown( "Undergraduate student of Data Science at IIMAS, UNAM, Mexico.")
         st.image("./imgs/mem_circle.png")
 
