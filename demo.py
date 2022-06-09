@@ -63,7 +63,7 @@ if analysis == "LSTM-ARIMA forecast":
     if type_ts == 'New cases':
         with st.expander("Metrics"):
             st.markdown("Countries: Kenya, South Africa, China, India, France, Georgia, Mexico, United States of America")
-            st.code("""------------LSTM Kenya---------------
+            st.code("""    ------------LSTM Kenya---------------
     El MSE con LSTM es:  212143.2
     El RMSE con LSTM es:  460.59006
     El MAE con LSTM es:  180.14561
@@ -153,7 +153,7 @@ if analysis == "LSTM-ARIMA forecast":
     elif type_ts == "New deaths":
         with st.expander("Metrics"):
             st.markdown("Countries: Kenya, South Africa, China, India, France, Georgia, Mexico, United States of America")
-            st.code("""------------LSTM Kenya---------------
+            st.code("""    ------------LSTM Kenya---------------
     El MSE con LSTM es:  9.267876
     El RMSE con LSTM es:  3.0443187
     El MAE con LSTM es:  1.8983194
