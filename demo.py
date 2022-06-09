@@ -13,15 +13,6 @@ from src.helpers import predict_model, prob_model
 from src.NNClassifiers.NNmodels import NNclassifier
 from src.Forecast.LSTM_ARIMA import predict_future_jojojo,plot_ts, LSTM
 
-st.markdown("""
-<style>
-body {
-  background: #ff0099; 
-  background: -webkit-linear-gradient(to right, #ff0099, #493240); 
-  background: linear-gradient(to right, #ff0099, #493240); 
-}
-</style>
-    """, unsafe_allow_html=True)
 
 #Data cases
 cases_who = pd.read_csv('https://raw.githubusercontent.com/ArtemioPadilla/MachineLearningAndCOVID/main/Datasets/SDG-3-Health/WHO-COVID-19-global-data-up.csv')
@@ -49,7 +40,7 @@ classifier_death = load_model('./torch_models/model_death.pth')
 #TITLE
 st.title("Some applications of deep learning for the COVID-19 pandemic")
 st.markdown("In this application you can either get forecast for the COVID-19 pandemic infected number and deaths number using **LSTMs & ARIMA** or you can use a **neural network classifier** to get probabilities of desease and hospitalization for an individual with certain characteristics")
-st.subheader('UNAM')
+
 
 analysis = st.radio("Please enter which type of application you want to explore:", ["About us","Cases and deaths chart", "LSTM-ARIMA forecast", "Convolutional Neural Networks"])
 
@@ -295,6 +286,8 @@ if analysis == "LSTM-ARIMA forecast":
     #st.dataframe(df.iloc[:,3:])
     #st.line_chart(df.iloc[:,3:])
 elif analysis == "About us":
+    st.subheader('Universidad Nacional Autónoma de México')
+    
     col1, col2, col3 = st.columns(3)
 
     with col1:
