@@ -325,11 +325,8 @@ elif analysis == "About us":
 
 elif analysis == "Cases and deaths chart":
     with st.expander("See explanation"):
-        st.markdown("EXPLANATION FOR LSTMs")
+        st.markdown("A describe chart about the historic numbers of new deaths and new cases of covid in the world.")
         
-        
-        st.code("""for i in range(5):
-            algorithm""")
     type = st.selectbox("Pick type", ["Cases", "Deaths"])
     st.write(type, 'for all the world countries')
     if type == "Cases":
