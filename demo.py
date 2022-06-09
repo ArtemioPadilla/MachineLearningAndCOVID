@@ -13,6 +13,10 @@ from src.helpers import predict_model, prob_model
 from src.NNClassifiers.NNmodels import NNclassifier
 from src.Forecast.LSTM_ARIMA import predict_future_jojojo,plot_ts, LSTM
 
+[theme]
+base="dark"
+primaryColor="purple"
+
 #Data cases
 cases_who = pd.read_csv('https://raw.githubusercontent.com/ArtemioPadilla/MachineLearningAndCOVID/main/Datasets/SDG-3-Health/WHO-COVID-19-global-data-up.csv')
 
@@ -39,9 +43,9 @@ classifier_death = load_model('./torch_models/model_death.pth')
 #TITLE
 st.title("Some applications of deep learning for the COVID-19 pandemic")
 st.markdown("In this application you can either get forecast for the COVID-19 pandemic infected number and deaths number using **LSTMs & ARIMA** or you can use a **neural network classifier** to get probabilities of desease and hospitalization for an individual with certain characteristics")
+st.subheader('UNAM')
 
-
-analysis = st.radio("Please enter which type of application you want to explore:", ["None","Cases and deaths chart", "LSTM-ARIMA forecast", "Convolutional Neural Networks"])
+analysis = st.radio("Please enter which type of application you want to explore:", ["About us","Cases and deaths chart", "LSTM-ARIMA forecast", "Convolutional Neural Networks"])
 
 if analysis == "LSTM-ARIMA forecast":
     with st.expander("See explanation"):
@@ -284,7 +288,22 @@ if analysis == "LSTM-ARIMA forecast":
     #df = pd.read_csv(url)
     #st.dataframe(df.iloc[:,3:])
     #st.line_chart(df.iloc[:,3:])
-    
+elif analysis == "About us"
+    col1, col2, col3 = st.columns(3)
+
+    with col1:
+        st.header("A cat")
+        st.image("https://static.streamlit.io/examples/cat.jpg")
+
+    with col2:
+        st.header("A dog")
+        st.image("https://static.streamlit.io/examples/dog.jpg")
+
+    with col3:
+        st.header("An owl")
+        st.image("https://static.streamlit.io/examples/owl.jpg")
+        
+
 elif analysis == "Cases and deaths chart":
     with st.expander("See explanation"):
         st.markdown("EXPLANATION FOR LSTMs")
@@ -480,15 +499,8 @@ weighted avg       0.97      0.81      0.87     86223
         
 
         #st.snow()
-with st.expander("See contributors"):
-    col1, col2, col3 = st.columns(3)
-    col1.markdown("[Alfonso Barajas](https://github.com/AlfonsBC)")
-    col2.markdown("[Carlos Cerritos](https://github.com/carloscerlira)")
-    col3.markdown("[Guillermo Cota](https://github.com/Gcota51)")
-    col1.markdown("[Raul Mosqueda](https://github.com/IsaidMosqueda)")
-    col2.markdown("[Artemio Padilla](https://github.com/ArtemioPadilla)")
-    col3.markdown("[Pamela Ruiz](https://github.com/Pamela-ruiz9)")
-    
+
+
 with st.expander("See contributors"):
     col1, col2, col3 = st.columns(3)
     col1.markdown("[Alfonso Barajas](https://github.com/AlfonsBC)")
