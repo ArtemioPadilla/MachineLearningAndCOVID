@@ -60,7 +60,7 @@ if analysis == "LSTM-ARIMA forecast":
 
     type_ts = st.radio("Count Type", ["New cases","New deaths"])
 
-    if type_ts = 'New cases':
+    if type_ts == 'New cases':
         with st.expander("Metrics"):
             st.markdown("Countries: Kenya, South Africa, China, India, France, Georgia, Mexico, United States of America")
             st.code("""------------LSTM Kenya---------------
