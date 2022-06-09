@@ -291,16 +291,36 @@ elif analysis == "About us":
     col1, col2, col3 = st.columns(3)
 
     with col1:
-        st.header("A cat")
-        st.image("./imgs/pamela_ruiz_02-modified.png")
+        st.header("Alfonso Barajas Cervantes")
+        st.markdown("Data Science Major at IIMAS, Applied Mathematics and Systems Research Institute, UNAM.")
+        st.image("./imgs/Alfonso_circle.png")
 
     with col2:
-        st.header("A dog")
-        st.image("https://static.streamlit.io/examples/dog.jpg")
+            st.header("Artemio Santiago Padilla Robles")
+            st.markdown("Physics bachelor graduate and Data Science bachelors student at UNAM")
+            st.image("./imgs/Art_circle.png")
 
     with col3:
-        st.header("An owl")
-        st.image("https://static.streamlit.io/examples/owl.jpg")
+        st.header("Raul Isaid Mosqueda GAarcía")
+        st.markdown("Data Science and Actuarial Science undergraduate at IIMAS-UNAM and Science Faculty - UNAM, Mexico.")
+        st.image("./imgs/raul_circle.png")
+
+    col11, col21, col31 = st.columns(3)
+
+    with col11:
+        st.header("Carlos Cerritos Lira")
+        st.markdown("Data science undergraduate student at IIMAS, UNAM, Mexico.")
+        st.image("./imgs/carlos_circle.png")
+
+    with col21:
+        st.header("Ingrid Pamela Ruiz")
+        st.markdown("Data Science student at IIMAS, UNAM Actuarial Science at Science Faculty, UNAM")
+        st.image("./imgs/pamela_ruiz_02-modified.png")
+
+    with col31:
+        st.header("Guillermo Cota Martínez")
+        st.markdown( "Undergraduate student of Data Science at the UNAM's (National Autonomous University of Mexico) Applied Mathematics and Systems Research Institute")
+        st.image("./imgs/mem_circle.png")
 
 
 elif analysis == "Cases and deaths chart":
