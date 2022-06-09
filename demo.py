@@ -42,7 +42,7 @@ st.title("Some applications of deep learning for the COVID-19 pandemic")
 st.markdown("In this application you can either get forecast for the COVID-19 pandemic infected number and deaths number using **LSTMs & ARIMA** or you can use a **neural network classifier** to get probabilities of desease and hospitalization for an individual with certain characteristics")
 
 
-analysis = st.radio("Please enter which type of application you want to explore:", ["None","Cases and deaths chart", "LSTM-ARIMA forecast", "Convolutional Neural Networks"])
+analysis = st.radio("Please enter which type of application you want to explore:", ["None", "LSTM-ARIMA forecast", "Convolutional Neural Networks"])#"Cases and deaths chart", "LSTM-ARIMA forecast", "Convolutional Neural Networks"])
 
 if analysis == "LSTM-ARIMA forecast":
     with st.expander("See explanation"):
@@ -289,17 +289,17 @@ elif analysis == "None":
     pass
 
 
-elif analysis == "Cases and deaths chart":
-    with st.expander("See explanation"):
-        st.markdown("A describe chart about the historic numbers of new deaths and new cases of covid in the world.")
+#elif analysis == "Cases and deaths chart":
+#    with st.expander("See explanation"):
+#        st.markdown("A describe chart about the historic numbers of new deaths and new cases of covid in the world.")
         
-    type = st.selectbox("Pick type", ["Cases", "Deaths"])
-    st.write(type, 'for all the world countries')
-    if type == "Cases":
-        fig = px.line(cases_who, x="Date_reported", y="New_cases", color="Country")
-    else:
-        fig = px.line(cases_who, x="Date_reported", y="New_deaths", color="Country")
-    st.plotly_chart(fig)
+#    type = st.selectbox("Pick type", ["Cases", "Deaths"])
+#    st.write(type, 'for all the world countries')
+#    if type == "Cases":
+#        fig = px.line(cases_who, x="Date_reported", y="New_cases", color="Country")
+#    else:
+#        fig = px.line(cases_who, x="Date_reported", y="New_deaths", color="Country")
+#    st.plotly_chart(fig)
 
 elif analysis == "Convolutional Neural Networks":
     with st.expander("About this model"):
