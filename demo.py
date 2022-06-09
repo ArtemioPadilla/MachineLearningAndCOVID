@@ -490,29 +490,29 @@ with st.expander("See contributors"):
     col1, col2, col3 = st.columns(3)
 
     with col1:
-        st.subheader("Alfonso Barajas Cervantes")
+        st.subheader("[Alfonso Barajas Cervantes]((https://github.com/AlfonsBC))")
         st.markdown("Data Science Major at IIMAS, Applied Mathematics and Systems Research Institute, UNAM.")
         st.image("./imgs/Alfonso_circle.png")
 
     with col2:
-            st.subheader("Artemio Santiago Padilla Robles")
+            st.subheader("[Artemio Santiago Padilla Robles](https://github.com/ArtemioPadilla)")
             st.markdown("Physics bachelor graduate and Data Science bachelors student at UNAM")
             st.image("./imgs/Art_circle.png")
 
     with col3:
-        st.subheader("Raul Isaid Mosqueda García")
+        st.subheader("[Raul Isaid Mosqueda García](https://github.com/IsaidMosqueda)")
         st.markdown("Data Science and Actuarial Science undergraduate at IIMAS-UNAM and Science Faculty - UNAM, Mexico.")
         st.image("./imgs/raul_circle.png")
 
     col11, col21, col31 = st.columns(3)
 
     with col11:
-        st.subheader("Carlos Cerritos Lira")
+        st.subheader("[Carlos Cerritos Lira](https://github.com/carloscerlira)")
         st.markdown("Data science undergraduate student at IIMAS, UNAM, Mexico.")
         st.image("./imgs/carlos_circle.png")
 
     with col21:
-        st.subheader("Ingrid Pamela Ruiz")
+        st.subheader("[Ingrid Pamela Ruiz](https://github.com/Pamela-ruiz9)")
         st.markdown("Actuarial Science graduate, Data Science student at IIMAS UNAM")
         st.image("./imgs/pamela_ruiz_02-modified.png")
 
@@ -520,11 +520,3 @@ with st.expander("See contributors"):
         st.subheader("[Guillermo Cota Martínez](https://github.com/Gcota51)")
         st.markdown( "Undergraduate student of Data Science at IIMAS, UNAM, Mexico.")
         st.image("./imgs/mem_circle.png")
-    col1, col2, col3 = st.columns(3)
-    col1.markdown("[![Alfonso Barajas](./imgs/Alfonso_circle.png)](https://github.com/AlfonsBC)")
-    col1.markdown("[Alfonso Barajas](https://github.com/AlfonsBC)")
-    col2.markdown("[Carlos Cerritos](https://github.com/carloscerlira)")
-    col3.markdown("[Guillermo Cota](https://github.com/Gcota51)")
-    col1.markdown("[Raul Mosqueda](https://github.com/IsaidMosqueda)")
-    col2.markdown("[Artemio Padilla](https://github.com/ArtemioPadilla)")
-    col3.markdown("[Pamela Ruiz](https://github.com/Pamela-ruiz9)")
