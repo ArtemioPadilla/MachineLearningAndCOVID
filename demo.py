@@ -517,7 +517,7 @@ with st.expander("See contributors"):
         st.image("./imgs/pamela_ruiz_02-modified.png")
 
     with col31:
-        st.subheader("Guillermo Cota Martínez")
+        st.subheader("[Guillermo Cota Martínez](https://github.com/Gcota51)")
         st.markdown( "Undergraduate student of Data Science at IIMAS, UNAM, Mexico.")
         st.image("./imgs/mem_circle.png")
     col1, col2, col3 = st.columns(3)
