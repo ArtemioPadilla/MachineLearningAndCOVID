@@ -45,15 +45,202 @@ analysis = st.radio("Please enter which type of application you want to explore:
 
 if analysis == "LSTM-ARIMA forecast":
     with st.expander("See explanation"):
-        st.markdown("EXPLANATION FOR LSTMs")
+        st.markdown("What is RNN LSTM?")
         st.markdown("LSTM cells are used in recurrent neural networks that learn to predict the future from sequences of variable lengths. That RNN work with any kind of sequential data and, unlike ARIMA are not restricted to time series. ")
-        st.markdown("The basic architecture of a LSTM RNN is:")
+        st.markdown("LSTM architecture consists of a set of recurrently connected subnets. The basic architecture of a LSTM RNN is:")
         st.image("https://raw.githubusercontent.com/ArtemioPadilla/MachineLearningAndCOVID/main/src/Forecast/RNN_LSTM.JPG")  
+        st.markdown("What is ARIMA?")
+        st.markdown("ARIMA is a class of time series prediction models, and the name is an abbreviation for AutoRegressive Integrated Moving Average. The backbone of ARIMA is a mathematical model that represents the time series values using its past values. The model is based  in past values and past errors.")
         st.markdown("The main objective of this section is to perform a comparison of predictions using an lstm neural network and arima time series model.")
-        st.code("""for i in range(5):
-            algorithm""")
+        st.markdown("To compare the models, the following metrics were calculed for the countries: Kenya, South Africa, China, India, France, Georgia, Mexico, United States of America")
+        st.markdown(" - RMSE")
+        st.markdown(" - MSE")
+        st.markdown(" - MAE")
+
 
     type_ts = st.radio("Count Type", ["New cases","New deaths"])
+
+    if type_ts = 'New cases':
+        with st.expander("Metrics"):
+            st.markdown("Countries: Kenya, South Africa, China, India, France, Georgia, Mexico, United States of America")
+            st.code("""------------LSTM Kenya---------------
+    El MSE con LSTM es:  212143.2
+    El RMSE con LSTM es:  460.59006
+    El MAE con LSTM es:  180.14561
+
+    ------------ARIMA Kenya---------------
+    El MSE con ARIMA es:  740323.7511088527
+    El RMSE con ARIMA es:  860.4206826366116
+    El MAE con ARIMA es:  390.5434566216013
+
+
+    ------------LSTM South Africa---------------
+    El MSE con LSTM es:  9446242.0
+    El RMSE con LSTM es:  3073.4739
+    El MAE con LSTM es:  1612.4082
+
+    ------------ARIMA South Africa---------------
+    El MSE con ARIMA es:  171186698.77508742
+    El RMSE con ARIMA es:  13083.833489275512
+    El MAE con ARIMA es:  12446.598950552743
+
+
+    ------------LSTM China---------------
+    El MSE con LSTM es:  437632700.0
+    El RMSE con LSTM es:  20919.672
+    El MAE con LSTM es:  10398.583
+
+    ------------ARIMA China---------------
+    El MSE con ARIMA es:  1066199612.6180129
+    El RMSE con ARIMA es:  32652.712178592654
+    El MAE con ARIMA es:  18538.37500169928
+
+
+    ------------LSTM India---------------
+    El MSE con LSTM es:  115993200.0
+    El RMSE con LSTM es:  10770.014
+    El MAE con LSTM es:  5018.1313
+
+    ------------ARIMA India---------------
+    El MSE con ARIMA es:  9428567365.85269
+    El RMSE con ARIMA es:  97100.81032541742
+    El MAE con ARIMA es:  46162.13585655936
+
+
+    ------------LSTM France---------------
+    El MSE con LSTM es:  10029152000.0
+    El RMSE con LSTM es:  100145.66
+    El MAE con LSTM es:  63065.78
+
+    ------------ARIMA France---------------
+    El MSE con ARIMA es:  16628049406.33834
+    El RMSE con ARIMA es:  128949.79413065514
+    El MAE con ARIMA es:  82924.88815696917
+
+
+    ------------LSTM Georgia---------------
+    El MSE con LSTM es:  22785006.0
+    El RMSE con LSTM es:  4773.3643
+    El MAE con LSTM es:  2275.1643
+
+    ------------ARIMA Georgia---------------
+    El MSE con ARIMA es:  43724340.12655043
+    El RMSE con ARIMA es:  6612.438289054229
+    El MAE con ARIMA es:  4475.968398733317
+
+
+    ------------LSTM Mexico---------------
+    El MSE con LSTM es:  122454904.0
+    El RMSE con LSTM es:  11065.935
+    El MAE con LSTM es:  4777.158
+
+    ------------ARIMA Mexico---------------
+    El MSE con ARIMA es:  397645536.81367713
+    El RMSE con ARIMA es:  19941.051547340154
+    El MAE con ARIMA es:  9434.531578083092
+
+
+    ------------LSTM United States of America---------------
+    El MSE con LSTM es:  20236818000.0
+    El RMSE con LSTM es:  142256.17
+    El MAE con LSTM es:  74350.38
+
+    ------------ARIMA United States of America---------------
+    El MSE con ARIMA es:  68172416934.0904
+    El RMSE con ARIMA es:  261098.4812941094
+    El MAE con ARIMA es:  155405.6977868798""")
+
+    elif type_ts == "New deaths":
+        with st.expander("Metrics"):
+            st.markdown("Countries: Kenya, South Africa, China, India, France, Georgia, Mexico, United States of America")
+            st.code("""------------LSTM Kenya---------------
+    El MSE con LSTM es:  9.267876
+    El RMSE con LSTM es:  3.0443187
+    El MAE con LSTM es:  1.8983194
+
+    ------------ARIMA Kenya---------------
+    El MSE con ARIMA es:  12.484331549287267
+    El RMSE con ARIMA es:  3.5333173575674275
+    El MAE con ARIMA es:  2.1373411751674865
+
+
+    ------------LSTM South Africa---------------
+    El MSE con LSTM es:  4450.0024
+    El RMSE con LSTM es:  66.708336
+    El MAE con LSTM es:  38.15697
+
+    ------------ARIMA South Africa---------------
+    El MSE con ARIMA es:  8342.607891533537
+    El RMSE con ARIMA es:  91.33787763865294
+    El MAE con ARIMA es:  52.80795956130448
+
+
+    ------------LSTM China---------------
+    El MSE con LSTM es:  592.30865
+    El RMSE con LSTM es:  24.337393
+    El MAE con LSTM es:  15.833975
+
+    ------------ARIMA China---------------
+    El MSE con ARIMA es:  11965.511929528428
+    El RMSE con ARIMA es:  109.38698245005402
+    El MAE con ARIMA es:  67.43896391264572
+
+
+    ------------LSTM India---------------
+    El MSE con LSTM es:  117735.234
+    El RMSE con LSTM es:  343.12567
+    El MAE con LSTM es:  119.17878
+
+    ------------ARIMA India---------------
+    El MSE con ARIMA es:  193645.3129197657
+    El RMSE con ARIMA es:  440.05148894165296
+    El MAE con ARIMA es:  306.6602972624162
+
+
+    ------------LSTM France---------------
+    El MSE con LSTM es:  7795.0635
+    El RMSE con LSTM es:  88.28966
+    El MAE con LSTM es:  64.197334
+
+    ------------ARIMA France---------------
+    El MSE con ARIMA es:  10335.722447465152
+    El RMSE con ARIMA es:  101.6647551881435
+    El MAE con ARIMA es:  74.53796328080226
+
+
+    ------------LSTM Georgia---------------
+    El MSE con LSTM es:  52.66859
+    El RMSE con LSTM es:  7.257313
+    El MAE con LSTM es:  5.0376315
+
+    ------------ARIMA Georgia---------------
+    El MSE con ARIMA es:  1680.009230823292
+    El RMSE con ARIMA es:  40.987915668197765
+    El MAE con ARIMA es:  35.83540573395437
+
+
+    ------------LSTM Mexico---------------
+    El MSE con LSTM es:  393.85153
+    El RMSE con LSTM es:  19.845694
+    El MAE con LSTM es:  11.482425
+
+    ------------ARIMA Mexico---------------
+    El MSE con ARIMA es:  27996.721057525814
+    El RMSE con ARIMA es:  167.32220730532399
+    El MAE con ARIMA es:  138.43139017245866
+
+
+    ------------LSTM United States of America---------------
+    El MSE con LSTM es:  1088132.8
+    El RMSE con LSTM es:  1043.136
+    El MAE con LSTM es:  645.5833
+
+    ------------ARIMA United States of America---------------
+    El MSE con ARIMA es:  1023231.7525496285
+    El RMSE con ARIMA es:  1011.5491844441517
+    El MAE con ARIMA es:  798.7112836557212""")
+
+
     type_ts_ = type_ts.replace(" ", "_")
     aux =  cases_who[cases_who[type_ts_] !=0]. groupby('Country').sum()
     countries = list(aux[aux[type_ts_]>10000].index)
@@ -78,7 +265,7 @@ if analysis == "LSTM-ARIMA forecast":
     if type_ts_=="New_cases":
         last_pth = '_New_cases.pth'
     else:
-         last_pth = 'New_deaths.pth'
+        last_pth = 'New_deaths.pth'
 
     device = "cpu"#torch.device("cuda" if torch.cuda.is_available() else "cpu")
     @st.cache
