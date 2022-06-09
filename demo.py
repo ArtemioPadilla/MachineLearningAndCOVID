@@ -521,7 +521,7 @@ with st.expander("See contributors"):
         st.markdown( "Undergraduate student of Data Science at IIMAS, UNAM, Mexico.")
         st.image("./imgs/mem_circle.png")
     col1, col2, col3 = st.columns(3)
-    
+    col1.markdown("[![Alfonso Barajas](./imgs/Alfonso_circle.png)](https://github.com/AlfonsBC)")
     col1.markdown("[Alfonso Barajas](https://github.com/AlfonsBC)")
     col2.markdown("[Carlos Cerritos](https://github.com/carloscerlira)")
     col3.markdown("[Guillermo Cota](https://github.com/Gcota51)")
